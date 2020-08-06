@@ -15,8 +15,8 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   // Whiskey listeners:
-  // Show all whiskeys
-  // Get one whiskey
+  $('#whiskey-index').on('submit', whiskeyEvents.onIndex)
+  $('#update-whiskey').on('submit', whiskeyEvents.onUpdate)
   $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
   // delete a whiskey from the whiskey vault
 })

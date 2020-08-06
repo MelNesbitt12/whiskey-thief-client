@@ -4,7 +4,8 @@ const store = require('../store')
 
 const signUpSuccess = function () {
   $('#message').text('Congrats - you\'re signed up!')
-
+  $('.unauthenticated').hide()
+  $('.sign-in-field').show()
   $('form').trigger('reset')
 }
 
@@ -15,6 +16,9 @@ const signUpFailure = function () {
 const signInSuccess = function (response) {
   $('#message').text('Welcome - your whiskey shelf is waiting!')
   store.user = response.user
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
+  $('.sign-in-field').hide()
 
   $('form').trigger('reset')
 }
@@ -38,7 +42,9 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   $('#message').text('Signed Out - Happy Drinking!')
-
+  $('.unauthenticated').show()
+  $('.authenticated').hide()
+  $('#all-whiskeys').hide()
   $('form').trigger('reset')
 
   store.user = null
