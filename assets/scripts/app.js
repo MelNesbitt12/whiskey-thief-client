@@ -17,6 +17,6 @@ $(() => {
   // Whiskey listeners:
   // Show all whiskeys
   // Get one whiskey
-  // Create a new whiskey
+  $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
   // delete a whiskey from the whiskey vault
 })
