@@ -1,1 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
+
+.authenticated {
+  display: none;
+}
+
+.sign-in-field {
+  border: 5px solid #f2ef8a;
+  border-radius: 20px;
+}
+
+.unauthenticated {
+  border: 5px solid #f2ef8a;
+  border-radius: 20px;
+}
+
+h1 {
+  display: flex;
+  margin-left: 180px
+}
+
+#create-whiskey {
+  border: 5px solid #red;
+  border-radius: 20px;
+}
+
+#all-whiskeys {
+  border: 5px solid #f2ef8a;
+  border-radius: 20px;
+}

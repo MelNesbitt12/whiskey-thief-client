@@ -16,6 +16,29 @@ const onCreate = function (event) {
     .catch(ui.createWhiskeyFailure)
 }
 
+const onIndex = function (event) {
+  event.preventDefault()
+
+  const usersWhiskey = store.user.token
+
+  api.indexWhiskey(usersWhiskey)
+    .then(ui.indexWhiskeySuccess)
+    .catch(ui.indexWhiskeyFailure)
+}
+
+const onUpdate = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.updateWhiskey(formData)
+    .then(ui.updateWhiskeySuccess)
+    .catch(ui.updateWhiskeyFailure)
+}
+
 module.exports = {
-  onCreate
+  onCreate,
+  onIndex,
+  onUpdate
 }
