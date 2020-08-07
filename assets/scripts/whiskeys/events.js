@@ -26,6 +26,19 @@ const onIndex = function (event) {
     .catch(ui.indexWhiskeyFailure)
 }
 
+const onShow = function (event) {
+  event.preventDefault()
+  console.log()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+
+  api.showWhiskey(formData)
+    .then(ui.showWhiskeySuccess)
+    .catch(ui.showWhiskeyFailure)
+}
+
 const onUpdate = function (event) {
   event.preventDefault()
 
@@ -37,8 +50,22 @@ const onUpdate = function (event) {
     .catch(ui.updateWhiskeyFailure)
 }
 
+const onDelete = function (event) {
+  event.preventDefault()
+  console.log('this is the event', event)
+  // const deletedWhiskey = store.user.token
+  const whiskeyId = $(event.target).closest('section').data('id')
+  console.log('the whiskey id is', whiskeyId)
+
+  api.deleteWhiskey(whiskeyId)
+    .then(ui.deleteWhiskeySuccess)
+    .catch(ui.deleteWhiskeyFailure)
+}
+
 module.exports = {
   onCreate,
   onIndex,
-  onUpdate
+  onShow,
+  onUpdate,
+  onDelete
 }

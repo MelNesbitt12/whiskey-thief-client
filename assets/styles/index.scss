@@ -1,30 +1,63 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-color: #ede8d8;
+  font-family: 'Epilogue', sans-serif;
+}
+
 .authenticated {
   display: none;
 }
 
-.sign-in-field {
-  border: 5px solid #f2ef8a;
-  border-radius: 20px;
+.sign-in-field, .sign-up-field {
+  display: block;
+  width: fit-content;
 }
 
 .unauthenticated {
-  border: 5px solid #f2ef8a;
+  border: 5px solid #76b5a3;
   border-radius: 20px;
+  margin-top: 50px;
 }
 
 h1 {
-  display: flex;
-  margin-left: 180px
+  background-color: #76b5a3;
+  color: white;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
 }
 
 #create-whiskey {
-  border: 5px solid #red;
-  border-radius: 20px;
+  // border: 5px solid #76b5a3;
+  // border-radius: 20px;
 }
 
 #all-whiskeys {
-  border: 5px solid #f2ef8a;
+  border: 5px solid #76b5a3;
   border-radius: 20px;
+  width: fit-content;
+}
+
+#update-whiskey {
+  margin-bottom: 100px
+}
+
+#welcome {
+  border: 5px solid #76b5a3;
+  border-radius: 20px;
+}
+
+#sign-out {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #76b5a3;
+  color: white;
+  text-align: center;
 }

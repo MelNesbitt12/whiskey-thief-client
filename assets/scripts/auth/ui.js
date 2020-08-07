@@ -10,13 +10,19 @@ const signUpSuccess = function () {
 }
 
 const signUpFailure = function () {
+  $('#message').css('margin-top', '50px')
   $('#message').text('Sign up failed.')
 }
 
 const signInSuccess = function (response) {
-  $('#message').text('Welcome - your whiskey shelf is waiting!')
   store.user = response.user
   $('.authenticated').show()
+  $('#all-whiskeys').hide()
+  $('.authenticated').css('margin-top', '40px')
+  $('#change-password').css('margin-top', '50px')
+  $('#message').text('Welcome - your whiskey shelf is waiting!')
+  $('#message').css('margin-top', '50px')
+  $('#message').css('text-align', 'center')
   $('.unauthenticated').hide()
   $('.sign-in-field').hide()
 
@@ -24,6 +30,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function () {
+  $('#message').css('margin-top', '50px')
   $('#message').text('Sign in failed - try again!')
 }
 

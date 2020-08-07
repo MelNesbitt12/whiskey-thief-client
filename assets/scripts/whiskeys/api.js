@@ -28,7 +28,7 @@ const indexWhiskey = function () {
 }
 
 const updateWhiskey = function (formData) {
-  let newWhiskeyId = formData.whiskey.id
+  const newWhiskeyId = formData.whiskey.id
   console.log('updateWhiskey working')
   console.log('This is me finding the ID', newWhiskeyId)
   return $.ajax({
@@ -41,8 +41,37 @@ const updateWhiskey = function (formData) {
   })
 }
 
+const showWhiskey = function (formData) {
+  const currentWhiskeyId = formData
+  console.log('showWhiskey working')
+  console.log('This is me showing the ID', currentWhiskeyId)
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/whiskeys/' + currentWhiskeyId,
+    method: 'GET',
+    data: formData
+  })
+}
+
+const deleteWhiskey = function (whiskeyId) {
+  console.log('deleteWhiskey working')
+  console.log('This is me showing the ID', whiskeyId)
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/whiskeys/' + whiskeyId,
+    method: 'DELETE',
+    user: store.user
+  })
+}
+
 module.exports = {
   createWhiskey,
   indexWhiskey,
-  updateWhiskey
+  showWhiskey,
+  updateWhiskey,
+  deleteWhiskey
 }

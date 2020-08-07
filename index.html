@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+      <title>Whiskey Thief</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,11 +13,16 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Whiskey Thief: Your Virtual Whiskey Collection</h1>
+      <h1>Whiskey Thief: Your Virtual Whiskey Collection</h1><br>
+
+      <!-- <form id="welcome">
+        <button id="new" type="submit">New User</button>
+        <button id="returning" type="submit">Returning User</button>
+      </form> -->
 
       <p id="message" class="not-started"></p>
 
-      <form id="sign-up" class="unauthenticated">
+      <form id="sign-up" class="unauthenticated sign-up-field">
           <p id="new-user">Create a Whiskey Shelf</p>
           <input name="credentials[email]" type="email" placeholder="email here">
           <input name="credentials[password]" type="password" placeholder="password here">
@@ -37,10 +43,6 @@
           <button id="password" type="submit">Change Password</button>
       </form>
 
-      <form id="sign-out" class="authenticated">
-          <button id="sign-out-button" type="submit">Sign Out</button>
-      </form>
-
       <form id="create-whiskey" class="authenticated">
           <input name="whiskey[name]" type="text" placeholder="name">
           <input name="whiskey[type]" type="text" placeholder="type">
@@ -48,11 +50,17 @@
           <input name="whiskey[price]" type="text" placeholder="price">
           <button id="create-whiskey-button" type="submit">Add to your Shelf</button>
       </form>
+
       <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit">See your whiskey shelf</button>
       </form>
 
-      <div id="all-whiskeys"></div>
+      <div id="all-whiskeys" class="authenticated"></div><br>
+
+      <form id ="one-whiskey" class="authenticated">
+        <input data-id="whiskey[id]" type="text" placeholder="ID">
+        <button id="see-one-whiskey" type="submit">Take One Off the Shelf</button>
+      </form>
 
       <form id="update-whiskey" class="authenticated">
         <input name="whiskey[id]" type="text" placeholder="ID">
@@ -63,11 +71,16 @@
         <button type="submit">Update</button>
     </form>
 
-      <form id="delete-whiskey" class="authenticated">
+      <!-- <form id="delete-whiskey" class="authenticated">
+        <input name="whiskey[id]" type="text" placeholder="ID">
         <button id="whiskey-to-delete" type="submit">Delete</button>
+      </form><br> -->
+
+    <footer>
+      <form id="sign-out" class="authenticated">
+          <button id="sign-out-button" type="submit">Sign Out</button>
       </form>
-
-
+    </footer>
 
     </body>
 </html>
