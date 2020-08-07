@@ -4,11 +4,7 @@
 const authEvents = require('./auth/events.js')
 const whiskeyEvents = require('./whiskeys/events.js')
 
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
 $(() => {
-  // Authentication listeners:
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -16,7 +12,13 @@ $(() => {
 
   // Whiskey listeners:
   $('#whiskey-index').on('submit', whiskeyEvents.onIndex)
+  $('#one-whiskey').on('submit', whiskeyEvents.onShow)
   $('#update-whiskey').on('submit', whiskeyEvents.onUpdate)
   $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
-  // delete a whiskey from the whiskey vault
+  // $('#delete-whiskey').on('submit', whiskeyEvents.onDelete)
+  $('#all-whiskeys').on('click', '.delete-button', function (event) {
+    console.log('in event handler anonymous function for delete')
+    console.log('checking if delete function is defined', whiskeyEvents.onDelete)
+    whiskeyEvents.onDelete(event)
+  })
 })

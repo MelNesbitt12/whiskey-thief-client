@@ -1,0 +1,41 @@
+{{#each whiskeys as |whiskey|}}
+  {{log whiskey}}
+  <section data-id="{{whiskey._id}}">
+    <h6>ID:
+      {{#if whiskey._id}}
+        {{whiskey._id}}
+      {{else}}
+        No ID provided.
+        {{/if}}
+      </h6>
+    <h6>Name:
+      {{#if whiskey.name}}
+        {{whiskey.name}}
+      {{else}}
+        No name provided.
+      {{/if}}
+    </h6>
+    <h6>Type:
+      {{#if whiskey.type}}
+        {{whiskey.type}}
+      {{else}}
+        No whiskey type provided.
+      {{/if}}
+    </h6>
+    <h6>Country:
+      {{#if whiskey.country}}
+        {{whiskey.country}}
+      {{else}}
+        No country provided.
+      {{/if}}
+    </h6>
+    <h6>Price:
+      {{#if whiskey.price}}
+        {{whiskey.price}}
+      {{else}}
+        No price provided.
+      {{/if}}
+    </h6>
+    <button class="delete-button" data-id="{{whiskey._id}}">Delete</button>
+  </section>
+{{/each}}
