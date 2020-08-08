@@ -3,7 +3,7 @@
 const store = require('../store')
 
 const signUpSuccess = function () {
-  $('#message').text('Congrats - you\'re signed up!')
+  $('#message').text('Sign up complete! Ready to start collecting?')
   $('.unauthenticated').hide()
   $('.sign-in-field').show()
   $('form').trigger('reset')
@@ -18,9 +18,11 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('.authenticated').show()
   $('#all-whiskeys').hide()
+  $('#one-whiskey').hide()
+  $('#see-whiskeys').show()
   $('.authenticated').css('margin-top', '40px')
   $('#change-password').css('margin-top', '50px')
-  $('#message').text('Welcome - your whiskey shelf is waiting!')
+  $('#message').text('Welcome to your whiskey shelf!')
   $('#message').css('margin-top', '50px')
   $('#message').css('text-align', 'center')
   $('.unauthenticated').hide()
