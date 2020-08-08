@@ -41,7 +41,7 @@ const onShow = function (event) {
 
 const onUpdate = function (event) {
   event.preventDefault()
-
+  // const whiskeyId = $(event.target).closest('section').data('id')
   const form = event.target
   const formData = getFormFields(form)
 

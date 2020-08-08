@@ -4,15 +4,16 @@ const store = require('../store')
 const showWhiskeyTemplate = require('../templates/whiskey-listing.handlebars')
 
 const createWhiskeySuccess = function () {
-  $('#message').text('New whiskey added to your shelf! Click "See Your Shelf" for updates.')
-  // $('#all-whiskeys').hide()
+  $('#message').text('You\'ve added a whiskey. Click "See Your Whiskey Shelf" for updates!')
+  $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
+  $('#see-whiskeys').show()
 
   $('form').trigger('reset')
 }
 
 const createWhiskeyFailure = function () {
-  $('#message').text('Failed to add whiskey to your shelf :(')
+  $('#message').text('Failed to add whiskey to your shelf.')
 }
 
 const indexWhiskeySuccess = function (response) {
@@ -21,7 +22,8 @@ const indexWhiskeySuccess = function (response) {
   $('#all-whiskeys').empty()
   $('#all-whiskeys').show()
   $('#all-whiskeys').append(showWhiskeyHTML)
-  $('#message').text('Viewing your shelf!')
+  $('#see-whiskeys').hide()
+  $('#message').text('Your shelf is looking GOOD.')
 }
 
 const indexWhiskeyFailure = function () {
@@ -33,6 +35,8 @@ const showWhiskeySuccess = function (response) {
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskey: response.whiskey })
   $('#all-whiskeys').show()
   $('#all-whiskeys').append(showWhiskeyHTML)
+  $('#one-whiskey').show()
+  $('#update-whiskey').show()
 }
 
 const showWhiskeyFailure = function () {
@@ -40,10 +44,11 @@ const showWhiskeyFailure = function () {
 }
 
 const updateWhiskeySuccess = function (repsonse) {
-  $('#message').text('Whiskey updated! Click "See Your Shelf" for updates.')
+  $('#message').text('Whiskey updated. Click "See Your Whiskey Shelf" for updates!')
   $('form').trigger('reset')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
+  $('#see-whiskeys').show()
 }
 
 const updateWhiskeyFailure = function () {
@@ -51,9 +56,10 @@ const updateWhiskeyFailure = function () {
 }
 
 const deleteWhiskeySuccess = function () {
-  $('#message').text('Whiskey deleted! Click "See Your Shelf" for updates.')
+  $('#message').text('Whiskey deleted. Click "See Your Whiskey Shelf" for updates!')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
+  $('#see-whiskeys').show()
 }
 
 const deleteWhiskeyFailure = function () {

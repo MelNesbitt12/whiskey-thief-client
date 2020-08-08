@@ -1,8 +1,15 @@
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ede8d8;
+  cursor: pointer;
   font-family: 'Epilogue', sans-serif;
+  min-height: 100vh;
+  padding: 3rem 0 1rem;
 }
 
 .authenticated {
@@ -15,13 +22,46 @@ body {
 }
 
 .unauthenticated {
-  border: 5px solid #76b5a3;
+  background-color: #76b5a3;
+  border: 5px solid white;
   border-radius: 20px;
+  flex: 50%;
   margin-top: 50px;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
+}
+
+.row-two {
+  display: flex;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#create-whiskey, #change-password {
+  background-color: #76b5a3;
+  border: 5px solid white;
+  border-radius: 20px;
+  flex: 50%;
+  font-size: 20px;
+  margin-top: 50px;
+  padding: 20px;
 }
 
 h1 {
   background-color: #76b5a3;
+  border: 2px solid white;
   color: white;
   display: block;
   position: fixed;
@@ -32,19 +72,29 @@ h1 {
   text-shadow: 2px 2px rgba(0, 0, 0, .25);
 }
 
-#create-whiskey {
-  // border: 5px solid #76b5a3;
-  // border-radius: 20px;
-}
-
 #all-whiskeys {
-  border: 5px solid #76b5a3;
+  background: #76b5a3;
+  border: 5px solid white;
   border-radius: 20px;
-  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
 }
 
 #update-whiskey {
   margin-bottom: 100px
+}
+
+#message {
+  color: #76b5a3;
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  margin: 0 auto;
+  padding: 15px;
+  width: 50%;
 }
 
 #welcome {
@@ -52,12 +102,34 @@ h1 {
   border-radius: 20px;
 }
 
+#password, #create-whiskey-button, #see-one-whiskey, #update, #sign-out-button {
+  background:#ede8d8;
+  color: black;
+}
+
+#see-whiskeys {
+  background: #76b5a3;
+  color: white;
+  font-size: 20px;
+}
+
+#whiskey-index {
+  color: #76b5a3;
+  width: 100%;
+  text-align: center;
+}
+
+#sign-up-button, #sign-in-button {
+  background: #ede8d8;
+}
+
 #sign-out {
+  background-color: #76b5a3;
+  border: 2px solid white;
+  color: #ede8d8;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #76b5a3;
-  color: white;
   text-align: center;
 }
