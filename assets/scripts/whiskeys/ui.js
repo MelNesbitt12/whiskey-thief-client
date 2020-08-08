@@ -19,11 +19,15 @@ const createWhiskeyFailure = function () {
 const indexWhiskeySuccess = function (response) {
   store.whiskey = response.whiskey
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskeys: response.whiskeys })
+  if ({ whiskeys: response.whiskey } === undefined) {
+    $('#message').text('Nothing on your shelf.')
+  } else {
+    $('#message').text('Your shelf is looking GOOD.')
+  }
   $('#all-whiskeys').empty()
   $('#all-whiskeys').show()
   $('#all-whiskeys').append(showWhiskeyHTML)
   $('#see-whiskeys').hide()
-  $('#message').text('Your shelf is looking GOOD.')
 }
 
 const indexWhiskeyFailure = function () {
