@@ -3,8 +3,10 @@
 const store = require('../store')
 const showWhiskeyTemplate = require('../templates/whiskey-listing.handlebars')
 
+// if createWhiskey ajax request is successful, load success message, empty #all-whiskeys div to ensure that index is reset
 const createWhiskeySuccess = function () {
-  $('#message').text('You\'ve added a whiskey. Click "See Your Whiskey Shelf" for updates!')
+  $('#myModalThree').modal('show')
+  $('#message').text('Check out your shelf!')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
@@ -14,12 +16,14 @@ const createWhiskeySuccess = function () {
 
 const createWhiskeyFailure = function () {
   $('#message').text('Failed to add whiskey to your shelf.')
+  $('#myModalThree').modal('hide')
 }
 
+// if indexWhiskey ajax request is sucessful, store all whiskeys and use handlebars template to display each whiskey as separate object on the page
 const indexWhiskeySuccess = function (response) {
   store.whiskey = response.whiskey
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskeys: response.whiskeys })
-  if ({ whiskeys: response.whiskey } === undefined) {
+  if (response.whiskeys.length === 0) {
     $('#message').text('Nothing on your shelf.')
   } else {
     $('#message').text('Your shelf is looking GOOD.')
@@ -47,8 +51,10 @@ const showWhiskeyFailure = function () {
   $('#message').text('Could not view whiskey')
 }
 
+// if updateWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
 const updateWhiskeySuccess = function (repsonse) {
-  $('#message').text('Whiskey updated. Click "See Your Whiskey Shelf" for updates!')
+  $('#message').text('Check out your shelf!')
+  $('#myModalFour').modal('show')
   $('form').trigger('reset')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
@@ -57,10 +63,13 @@ const updateWhiskeySuccess = function (repsonse) {
 
 const updateWhiskeyFailure = function () {
   $('#message').text('Could not update your whiskey')
+  $('#myModalFour').modal('hide')
 }
 
+// if deleteWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
 const deleteWhiskeySuccess = function () {
-  $('#message').text('Whiskey deleted. Click "See Your Whiskey Shelf" for updates!')
+  $('#myModalFive').modal('show')
+  $('#message').text('Check out your shelf!')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
@@ -68,6 +77,7 @@ const deleteWhiskeySuccess = function () {
 
 const deleteWhiskeyFailure = function () {
   $('#message').text('Could not delete whiskey')
+  $('#myModalFive').modal('hide')
 }
 
 module.exports = {

@@ -5,6 +5,7 @@ const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields.js')
 const store = require('../store.js')
 
+// upon click, a new whiskey is created
 const onCreate = function (event) {
   event.preventDefault()
 
@@ -16,6 +17,7 @@ const onCreate = function (event) {
     .catch(ui.createWhiskeyFailure)
 }
 
+// upon click, all whiskeys are requested from the API
 const onIndex = function (event) {
   event.preventDefault()
 
@@ -39,6 +41,7 @@ const onShow = function (event) {
     .catch(ui.showWhiskeyFailure)
 }
 
+// upon click, information about a particular whiskey is updated based on form input
 const onUpdate = function (event) {
   event.preventDefault()
   // const whiskeyId = $(event.target).closest('section').data('id')
@@ -50,12 +53,11 @@ const onUpdate = function (event) {
     .catch(ui.updateWhiskeyFailure)
 }
 
+// upon click, a whiskey is deleted from the database
 const onDelete = function (event) {
   event.preventDefault()
-  console.log('this is the event', event)
   // const deletedWhiskey = store.user.token
   const whiskeyId = $(event.target).closest('section').data('id')
-  console.log('the whiskey id is', whiskeyId)
 
   api.deleteWhiskey(whiskeyId)
     .then(ui.deleteWhiskeySuccess)

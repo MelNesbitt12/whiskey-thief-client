@@ -68,12 +68,18 @@ h1 {
   border: 2px solid white;
   color: white;
   display: block;
+  font-size: 50px;
+  padding: 10px;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, .25);
+}
+
+input {
+  margin-bottom: 5px;
 }
 
 #all-whiskeys, #update-whiskey {
@@ -104,11 +110,6 @@ h1 {
   width: 50%;
 }
 
-#welcome {
-  border: 5px solid #76b5a3;
-  border-radius: 20px;
-}
-
 #password, #create-whiskey-button, #see-one-whiskey, #update, #sign-out-button {
   background:#ede8d8;
   color: black;
@@ -128,12 +129,14 @@ h1 {
 
 #sign-up-button, #sign-in-button {
   background: #ede8d8;
+  color: black;
 }
 
 #sign-out {
   background-color: #76b5a3;
   border: 2px solid white;
   color: #ede8d8;
+  padding: 5px;
   position: fixed;
   left: 0;
   bottom: 0;
