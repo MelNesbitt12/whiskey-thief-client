@@ -17,5 +17,5 @@ $(() => {
   $('#update-whiskey').on('submit', whiskeyEvents.onUpdate)
   $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
   $('#all-whiskeys').on('click', '.delete-button', whiskeyEvents.onDelete)
-  // $('#all-whiskeys').on('submit', '#update-whiskey-two', whiskeyEvents.onUpdate)
+  // $('#all-whiskeys').on('submit', '#update-whiskey', whiskeyEvents.onUpdate)
 })

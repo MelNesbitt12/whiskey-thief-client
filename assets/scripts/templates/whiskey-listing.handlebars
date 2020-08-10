@@ -35,7 +35,13 @@
       {{else}}
         No price provided.
       {{/if}}
+      <h6 style="color: white;font-size:20px;">Comments:
+        {{#if whiskey.comments}}
+          {{whiskey.comments}}
+        {{else}}
+          No comments provided.
+        {{/if}}
     </h6>
-    <button class="delete-button" data-id="{{whiskey._id}}" style="background:#ede8d8;color:black;">Delete</button>
+    <button class="delete-button btn-info btn-md" data-id="{{whiskey._id}}" style="background:#ede8d8;color:black;">Delete</button>
   </section><br>
 {{/each}}

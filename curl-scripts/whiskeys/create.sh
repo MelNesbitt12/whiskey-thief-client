@@ -13,7 +13,8 @@ curl "${API}${URL_PATH}" \
       "name": "'"${NAME}"'",
       "type": "'"${TYPE}"'",
       "country": "'"${COUNTRY}"'",
-      "price": "'"${PRICE}"'"
+      "price": "'"${PRICE}"'",
+      "comments": "'"${COMMENTS}"'"
     }
   }'
 

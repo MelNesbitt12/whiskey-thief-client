@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('#myModal').modal('show')
   $('.authenticated').show()
+  $('.update-wrapper').hide()
   $('#all-whiskeys').hide()
   $('#one-whiskey').hide()
   $('#see-whiskeys').show()

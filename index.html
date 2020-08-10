@@ -23,14 +23,14 @@
           <input name="credentials[email]" type="email" placeholder="email here">
           <input name="credentials[password]" type="password" placeholder="password here">
           <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-          <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
+          <button id="sign-up-button" type="submit" class="btn btn-info btn-md">Create Account</button>
         </form>
 
       <form id="sign-in" class="unauthenticated sign-in-field column">
           <p id="returning-user">Your Shelf Is Waiting</p>
           <input name="credentials[email]" placeholder="email here" type="email">
           <input name="credentials[password]" placeholder="password here" type="password"><br>
-          <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
+          <button id="sign-in-button" type="submit" class="btn btn-info btn-md">Sign In</button>
       </form>
     </div>
 
@@ -39,7 +39,7 @@
           <p>Change Your Password</p>
           <input name="passwords[old]" placeholder="old password" type="password">
           <input name="passwords[new]" placeholder="new password" type="password"><br>
-          <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
+          <button id="password" type="submit" class="btn btn-info btn-md">Change</button>
       </form>
 
       <form id="create-whiskey" class="authenticated">
@@ -47,14 +47,23 @@
           <input name="whiskey[name]" type="text" placeholder="name">
           <input name="whiskey[type]" type="text" placeholder="type">
           <input name="whiskey[country]" type="text" placeholder="country">
-          <input name="whiskey[price]" type="text" placeholder="price"><br>
-          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg">Add</button>
+          <input name="whiskey[price]" type="text" placeholder="price">
+          <input name="whiskey[comments]" type="text" placeholder="comments"><br>
+          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-md">Add</button>
       </form>
     </div>
 
     <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
     </form>
+
+  <!-- <div class="create-wrapper">
+      <button class="create-button authenticated btn-lg" data-toggle="modal" data-target="#myModalThree">Add A Whiskey to Your Shelf</button>
+  </div> -->
+
+  <div class="update-wrapper">
+      <button class="update-button authenticated btn-lg" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
+  </div>
 
       <div id="all-whiskeys" class="authenticated"></div><br>
 
@@ -63,7 +72,7 @@
         <button id="see-one-whiskey" type="submit" class="btn btn-info btn-lg">Take One Off The Shelf</button>
     </form>
 
-    <form id="update-whiskey" class="authenticated">
+    <!-- <form id="update-whiskey" class="authenticated">
       <p>Update A Bottle</p>
         <input name="whiskey[id]" type="text" placeholder="ID">
         <input name="whiskey[name]" type="text" placeholder="name"><br>
@@ -71,7 +80,7 @@
         <input name="whiskey[country]" type="text" placeholder="country"><br>
         <input name="whiskey[price]" type="text" placeholder="price"><br>
         <button id="update" type="submit" class="btn btn-info btn-lg">Update</button>
-    </form>
+    </form> -->
 
     <!-- Modals-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
@@ -82,10 +91,11 @@
                 <h4 class="modal-title">You're Signed In!</h4>
               </div>
               <div class="modal-body">
-                <p>From here, you can check out the whiskeys on your shelf, add more, or update specific bottles.</p>
+                <p>From here, you can check out the whiskeys on your shelf, add more, or update information about specific bottles.</p>
+                <p>To update, make sure you grab the whiskey's ID first!</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">I'm Ready!</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
               </div>
             </div>
           </div>
@@ -125,22 +135,29 @@
           </div>
         </div>
 
-        <div class="modal fade" id="myModalFour" role="dialog">
-          <div class="modal-dialog">
+        <div id="myModalFour" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 class="modal-title">You've Updated a Whiskey!</h4>
+              <div class="modal-header" style="background:#ede8d8;margin: 0 auto;">
+                <h2 class="modal-title">Update Your Whiskey</h2>
               </div>
               <div class="modal-body">
-                <p>Click "See Your Whiskey Shelf" for updates!</p>
-              </div>
+                <form id="update-whiskey" class="form" style="margin:0 auto;padding:5px;width:100%">
+                  ID: <input name="whiskey[id]" type="text" placeholder="ID"><br>
+                  Name: <input name="whiskey[name]" type="text" placeholder="name"><br>
+                  Type: <input name="whiskey[type]" type="text" placeholder="type"><br>
+                  Country: <input name="whiskey[country]" type="text" placeholder="country"><br>
+                  Price: <input name="whiskey[price]" type="text" placeholder="price"><br>
+                  Comments: <input name="whiskey[comments]" type="text" placeholder="comments"><br>
+                  <button id="save-changes" class="form" style="background:#ede8d8;color:black;">Update Whiskey</button>
+                </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
+             </div>
             </div>
-          </div>
-        </div>
+           </div>
+         </div>
 
         <div class="modal fade" id="myModalFive" role="dialog">
           <div class="modal-dialog">
@@ -162,7 +179,7 @@
 
     <footer>
       <form id="sign-out" class="authenticated">
-          <button id="sign-out-button" type="submit" class="btn btn-info btn-lg">Sign Out</button>
+          <button id="sign-out-button" type="submit" class="btn btn-info btn-md">Sign Out</button>
       </form>
     </footer>
 
