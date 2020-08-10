@@ -28,19 +28,6 @@ const onIndex = function (event) {
     .catch(ui.indexWhiskeyFailure)
 }
 
-const onShow = function (event) {
-  event.preventDefault()
-  console.log('this is the event')
-
-  const form = event.target
-  const formData = getFormFields(form)
-  console.log(formData)
-
-  api.showWhiskey(formData)
-    .then(ui.showWhiskeySuccess)
-    .catch(ui.showWhiskeyFailure)
-}
-
 // upon click, information about a particular whiskey is updated based on form input
 const onUpdate = function (event) {
   event.preventDefault()
@@ -65,7 +52,6 @@ const onDelete = function (event) {
 module.exports = {
   onCreate,
   onIndex,
-  onShow,
   onUpdate,
   onDelete
 }

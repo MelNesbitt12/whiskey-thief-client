@@ -1,10 +1,8 @@
 # Whiskey Thief Client
 
-# Whiskey Thief API
-
 Whiskey Thief is a single page application designed to allow users to store, view, and update information about their favorite whiskeys. A "whiskey thief" is a tool that master distillers use to extract small portions of whiskey from aging barrels for sampling. This application serves as a whiskey thief of sorts, allowing users to "sample" information about whiskeys they've tried. This application works with a backend API - see deployed site link under "Important Links".
 
-I came up with this idea after spending the last year collecting over 50 bottles of whiskey with my husband. We are somewhat obsessed. I thought it would be fun and useful to have a way of storing information about the bottles we own, as well as basic information about what stood out to me about each whiskey (I've tried a lot, and can't remember them all!).
+I came up with this idea after spending the last year collecting over 50 bottles of whiskey with my husband. We are somewhat obsessed. I thought it would be fun and useful to have a way of storing information about the bottles we own, as well as basic information about what stood out to me about each whiskey (I've tried a lot, and can't remember them all!). I would like this application to eventually allow users to view and comment on each other's whiskey shelves. 
 
 ## Important Links
 
@@ -49,6 +47,8 @@ My Whiskey Thief application was built with:
 I have a mix of modals and text appearing on the page itself to update my users, so I'd like to put all messages into modals in a future version of my project.
 
 I want to put my "Add a Whiskey to your Shelf" form into a modal to be consistent with my use of a modal for my "Update a Whiskey" form.
+
+In a future version of this project, I want create, update and delete to dynamically update the user's whiskey shelf, so that the user does not need to click "See My Whiskey Shelf" to see updates.
 
 Users need to copy and paste the ID of the whiskey they would like to change into the Update Whiskey form, which feels cumbersome. I tried using handlebars to add an update button to each individual whiskey; while I was able to successfully send the PATCH request through by clicking the update button, the modal I was using to store the update form never fully closed. In a future version of this project, I'd like to tackle this issue.
 

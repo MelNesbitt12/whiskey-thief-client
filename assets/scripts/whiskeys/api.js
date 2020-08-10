@@ -39,18 +39,6 @@ const updateWhiskey = function (formData) {
   })
 }
 
-const showWhiskey = function (formData) {
-  const currentWhiskeyId = formData
-  return $.ajax({
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    url: config.apiUrl + '/whiskeys/' + currentWhiskeyId,
-    method: 'GET',
-    data: formData
-  })
-}
-
 const deleteWhiskey = function (whiskeyId) {
   return $.ajax({
     headers: {
@@ -65,7 +53,6 @@ const deleteWhiskey = function (whiskeyId) {
 module.exports = {
   createWhiskey,
   indexWhiskey,
-  showWhiskey,
   updateWhiskey,
   deleteWhiskey
 }
