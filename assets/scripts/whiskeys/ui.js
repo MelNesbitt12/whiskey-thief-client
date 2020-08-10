@@ -11,10 +11,10 @@ const createWhiskeySuccess = function () {
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
   $('.update-wrapper').hide()
-
   $('form').trigger('reset')
 }
 
+// if createWhiskey ajax request fails, load failure message
 const createWhiskeyFailure = function () {
   $('#message').text('Failed to add whiskey to your shelf.')
   $('#myModalThree').modal('hide')
@@ -26,6 +26,7 @@ const indexWhiskeySuccess = function (response) {
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskeys: response.whiskeys })
   if (response.whiskeys.length === 0) {
     $('#message').text('Your shelf is bone dry - better add something to it!')
+    $('#all-whiskeys').hide()
   } else {
     $('#message').text('Your shelf is looking GOOD.')
   }
@@ -36,10 +37,12 @@ const indexWhiskeySuccess = function (response) {
   $('.update-wrapper').show()
 }
 
+// if indexWhiskey ajax request fails, load failure message
 const indexWhiskeyFailure = function () {
   $('#message').text('Could not get your whiskey shelf')
 }
 
+// if showWhiskey ajax request is successful, send success message and use #all-whiskeys div to display selected whiskey
 const showWhiskeySuccess = function (response) {
   store.whiskey = response.whiskey
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskey: response.whiskey })
@@ -49,6 +52,7 @@ const showWhiskeySuccess = function (response) {
   $('#update-whiskey').show()
 }
 
+// if showWhiskey ajax request fails, show failure message
 const showWhiskeyFailure = function () {
   $('#message').text('Could not view whiskey')
 }
@@ -65,6 +69,7 @@ const updateWhiskeySuccess = function (response) {
   $('#see-whiskeys').show()
 }
 
+// if updateWhiskey ajax request fails, show failure message
 const updateWhiskeyFailure = function () {
   $('#message').text('Could not update your whiskey')
   $('#myModalFour').modal('hide')
@@ -80,6 +85,7 @@ const deleteWhiskeySuccess = function () {
   $('.update-wrapper').hide()
 }
 
+// if deleteWhiskey ajax request fails, show failure message
 const deleteWhiskeyFailure = function () {
   $('#message').text('Could not delete whiskey')
   $('#myModalFive').modal('hide')

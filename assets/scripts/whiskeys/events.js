@@ -44,7 +44,6 @@ const onShow = function (event) {
 // upon click, information about a particular whiskey is updated based on form input
 const onUpdate = function (event) {
   event.preventDefault()
-  // const whiskeyId = $(event.target).closest('section').data('id')
   const form = event.target
   const formData = getFormFields(form)
 
@@ -56,7 +55,6 @@ const onUpdate = function (event) {
 // upon click, a whiskey is deleted from the database
 const onDelete = function (event) {
   event.preventDefault()
-  // const deletedWhiskey = store.user.token
   const whiskeyId = $(event.target).closest('section').data('id')
 
   api.deleteWhiskey(whiskeyId)
