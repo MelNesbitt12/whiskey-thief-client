@@ -1,41 +1,41 @@
 {{#each whiskeys as |whiskey|}}
   {{log whiskey}}
   <section data-id="{{whiskey._id}}">
-    <h6 style="background:#ede8d8;color: black;font-size:20px;font-weight:bold;">ID:
+    <h6 style="background:#ede8d8;color: black;font-size:30px;font-weight:bold;">ID:
       {{#if whiskey._id}}
         {{whiskey._id}}
       {{else}}
         No ID provided.
         {{/if}}
       </h6>
-    <h6 style="color: white;font-size:25px;font-weight:bold;">Name:
+    <h6 style="color: white;font-size:30px;font-weight:bold;">Name:
       {{#if whiskey.name}}
         {{whiskey.name}}
       {{else}}
         No name provided.
       {{/if}}
     </h6>
-    <h6 style="color: white;font-size:20px;">Type:
+    <h6 style="color: white;font-size:25px;">Type:
       {{#if whiskey.type}}
         {{whiskey.type}}
       {{else}}
         No whiskey type provided.
       {{/if}}
     </h6>
-    <h6 style="color: white;font-size:20px;">Country:
+    <h6 style="color: white;font-size:25px;">Country:
       {{#if whiskey.country}}
         {{whiskey.country}}
       {{else}}
         No country provided.
       {{/if}}
     </h6>
-    <h6 style="color: white;font-size:20px;">Price:
+    <h6 style="color: white;font-size:25px;">Price:
       {{#if whiskey.price}}
         {{whiskey.price}}
       {{else}}
         No price provided.
       {{/if}}
-      <h6 style="color: white;font-size:20px;">Comments:
+      <h6 style="color: white;font-size:25px;">Comments:
         {{#if whiskey.comments}}
           {{whiskey.comments}}
         {{else}}
