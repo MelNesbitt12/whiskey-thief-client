@@ -14,6 +14,7 @@ const onCreate = function (event) {
 
   api.createWhiskey(formData)
     .then(ui.createWhiskeySuccess)
+    .then($('#see-whiskeys').click())
     .catch(ui.createWhiskeyFailure)
 }
 
