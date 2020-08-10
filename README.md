@@ -12,7 +12,7 @@ I came up with this idea after spending the last year collecting over 50 bottles
 
 ## Planning Story
 
-I began the planning process by creating a wireframe for each portion of the app: sign in and create account, a page where the user could update their password, add a whiskey to their shelf, update a whiskey, see all whiskeys, delete a whiskey and sign out.
+I began the planning process by creating a wireframe for each portion of the app: sign in and create account, a page where the user could update their password, add a whiskey to their shelf, update a whiskey, see all whiskeys, delete a whiskey and sign out. 
 
 ### User Stories
 
