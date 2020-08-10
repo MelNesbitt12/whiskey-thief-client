@@ -44,6 +44,7 @@ body {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  margin-top: 60px;
   margin-left: 10px;
   margin-right: 10px;
   text-shadow: 2px 2px rgba(0, 0, 0, .25);
@@ -68,7 +69,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   flex: 50%;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 20px;
 }
 
@@ -101,6 +102,8 @@ input {
   text-align: center;
   margin: 0 auto;
   padding: 20px;
+  position: relative;
+  bottom: 20px;
   width: 50%;
 }
 
@@ -128,6 +131,8 @@ input {
   background: #ede8d8;
   color: black;
   font-size: 20px;
+  position: relative;
+  bottom: 20px;
 }
 
 #whiskey-index {
