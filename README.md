@@ -1,48 +1,43 @@
 # Whiskey Thief Client
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+Whiskey Thief is a single page application designed to allow users to store, view, and update information about their favorite whiskeys. A "whiskey thief" is a tool that master distillers use to extract small portions of whiskey from aging barrels for sampling. This application serves as a whiskey thief of sorts, allowing users to "sample" information about whiskeys they've tried. This application works with a backend API - see deployed site link under "Important Links".
+
+I came up with this idea after spending the last year collecting over 50 bottles of whiskey with my husband. We are somewhat obsessed.
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Whiskey Thief API Repo] https://github.com/MelNesbitt12/whiskey-thief-api
+- [Deployed API] https://rocky-fjord-04258.herokuapp.com/
+- [Deployed Client]https://melnesbitt12.github.io/whiskey-thief-client/
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+I began the planning process by creating a wireframe for each portion of the app: sign in and create account, a page where the user could update their password, add a whiskey to their shelf, update a whiskey, see all whiskeys, delete a whiskey and sign out.
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+-As a user, I need to be able to sign in, create an account, sign out, and change my password.
+-As a user, I need to be able to add new whiskeys to my whiskey shelf.
+-As a user, I need to be able to update information about my whiskeys, including adding comments specific to each whiskey.
+-As a user, I need to be able to see a list of all whiskeys that I've tried.
+-As a user, I need to be able to delete whiskeys from my account.
 
 ### Technologies Used
 
--
+-Handlebars
+-Bootstrap
+-HTML
+-CSS
+-Javascript
 
 ### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually ....
 
-## Images
+
+## Images:
 
 #### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+![wireframe] https://imgur.com/a/VJGwNSA
+
 
 ---
-
-#### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)

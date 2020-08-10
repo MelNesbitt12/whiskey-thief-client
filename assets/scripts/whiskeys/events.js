@@ -30,7 +30,7 @@ const onIndex = function (event) {
 
 const onShow = function (event) {
   event.preventDefault()
-  console.log()
+  console.log('this is the event')
 
   const form = event.target
   const formData = getFormFields(form)

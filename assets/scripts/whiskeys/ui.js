@@ -10,6 +10,7 @@ const createWhiskeySuccess = function () {
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
+  $('.update-wrapper').hide()
 
   $('form').trigger('reset')
 }
@@ -24,7 +25,7 @@ const indexWhiskeySuccess = function (response) {
   store.whiskey = response.whiskey
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskeys: response.whiskeys })
   if (response.whiskeys.length === 0) {
-    $('#message').text('Nothing on your shelf.')
+    $('#message').text('Your shelf is bone dry - better add something to it!')
   } else {
     $('#message').text('Your shelf is looking GOOD.')
   }
@@ -32,6 +33,7 @@ const indexWhiskeySuccess = function (response) {
   $('#all-whiskeys').show()
   $('#all-whiskeys').append(showWhiskeyHTML)
   $('#see-whiskeys').hide()
+  $('.update-wrapper').show()
 }
 
 const indexWhiskeyFailure = function () {
@@ -52,9 +54,11 @@ const showWhiskeyFailure = function () {
 }
 
 // if updateWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
-const updateWhiskeySuccess = function (repsonse) {
-  $('#message').text('Check out your shelf!')
-  $('#myModalFour').modal('show')
+const updateWhiskeySuccess = function (response) {
+  $('#update-button').modal('hide')
+  $('.update-wrapper').hide()
+  $('#message').text('Whiskey updated - check out your shelf!')
+  $('#myModalFour').modal('hide')
   $('form').trigger('reset')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
@@ -73,6 +77,7 @@ const deleteWhiskeySuccess = function () {
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
+  $('.update-wrapper').hide()
 }
 
 const deleteWhiskeyFailure = function () {
