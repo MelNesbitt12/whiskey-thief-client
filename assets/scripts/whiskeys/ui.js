@@ -29,12 +29,12 @@ const indexWhiskeySuccess = function (response) {
     $('#all-whiskeys').hide()
   } else {
     $('#message').text('Your shelf is looking GOOD.')
+    $('#all-whiskeys').empty()
+    $('#all-whiskeys').show()
+    $('#all-whiskeys').append(showWhiskeyHTML)
+    $('.update-wrapper').show()
   }
-  $('#all-whiskeys').empty()
-  $('#all-whiskeys').show()
-  $('#all-whiskeys').append(showWhiskeyHTML)
   $('#see-whiskeys').hide()
-  $('.update-wrapper').show()
 }
 
 // if indexWhiskey ajax request fails, load failure message
