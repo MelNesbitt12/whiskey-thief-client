@@ -49,7 +49,6 @@
           <input name="whiskey[country]" type="text" placeholder="Country">
           <input name="whiskey[price]" type="text" placeholder="Price">
           <textarea type="text" name="whiskey[comments]" class="create-textbox" placeholder="Comments" style="margin-bottom: -15px;"></textarea>
-          <!-- <input name="whiskey[comments]" type="text" placeholder="comments"><br> -->
           <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin-bottom:5px;">Add</button>
       </form>
     </div>
@@ -57,10 +56,6 @@
     <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
     </form>
-
-  <!-- <div class="create-wrapper">
-      <button class="create-button authenticated btn-lg" data-toggle="modal" data-target="#myModalThree">Add A Whiskey to Your Shelf</button>
-  </div> -->
 
   <div class="update-wrapper">
       <button class="update-button authenticated btn-lg" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
@@ -73,17 +68,7 @@
         <button id="see-one-whiskey" type="submit" class="btn btn-info btn-lg">Take One Off The Shelf</button>
     </form>
 
-    <!-- <form id="update-whiskey" class="authenticated">
-      <p>Update A Bottle</p>
-        <input name="whiskey[id]" type="text" placeholder="ID">
-        <input name="whiskey[name]" type="text" placeholder="name"><br>
-        <input name="whiskey[type]" type="text" placeholder="type">
-        <input name="whiskey[country]" type="text" placeholder="country"><br>
-        <input name="whiskey[price]" type="text" placeholder="price"><br>
-        <button id="update" type="submit" class="btn btn-info btn-lg">Update</button>
-    </form> -->
-
-    <!-- Modals-->
+    <!-- Begin Modals-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -139,11 +124,11 @@
         <div id="myModalFour" class="modal fade" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header" style="background:#ede8d8;margin: 0 auto;">
+              <div class="modal-header" style="background:#ede8d8;margin:0 auto;padding:10px;">
                 <h2 class="modal-title">Update Your Whiskey</h2>
               </div>
               <div class="modal-body">
-                <form id="update-whiskey" class="form" style="display: block;margin:0 auto;padding:5px;">
+                <form id="update-whiskey" class="form" style="display:block;margin:0 auto;position:relative; top: 5px;padding:5px;">
                   ID: <input name="whiskey[id]" type="text" placeholder="ID" style="width:90%;"><br>
                   Name: <input name="whiskey[name]" type="text" placeholder="Name" style="width:90%;"><br>
                   Type: <input name="whiskey[type]" type="text" placeholder="Type" style="width:90%;"><br>
@@ -177,7 +162,7 @@
             </div>
           </div>
         </div>
-        <!-- End Modals-->
+      <!-- End Modals-->
 
     <footer>
       <form id="sign-out" class="authenticated">
