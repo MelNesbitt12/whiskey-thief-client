@@ -29,7 +29,6 @@ const indexWhiskey = function () {
 
 const updateWhiskey = function (formData) {
   const newWhiskeyId = formData.whiskey.id
-  console.log('This is me finding the ID', newWhiskeyId)
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token

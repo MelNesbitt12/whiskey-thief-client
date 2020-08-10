@@ -48,9 +48,9 @@
           <input name="whiskey[type]" type="text" placeholder="Type">
           <input name="whiskey[country]" type="text" placeholder="Country">
           <input name="whiskey[price]" type="text" placeholder="Price">
-          <textarea type="text" id="textbox" name="whiskey[comments]" class="create-textbox" placeholder="Comments"></textarea>
+          <textarea type="text" name="whiskey[comments]" class="create-textbox" placeholder="Comments" style"margin-bottom: -15px;"></textarea>
           <!-- <input name="whiskey[comments]" type="text" placeholder="comments"><br> -->
-          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-md">Add</button>
+          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-md" style="margin-bottom: 30px;">Add</button>
       </form>
     </div>
 
@@ -88,7 +88,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"</button>
+                <button type="button" class="close" data-dismiss="modal"></button>
                 <h4 class="modal-title">You're Signed In!</h4>
               </div>
               <div class="modal-body">
@@ -143,13 +143,13 @@
                 <h2 class="modal-title">Update Your Whiskey</h2>
               </div>
               <div class="modal-body">
-                <form id="update-whiskey" class="form" style="margin:0 auto;padding:5px;width:100%">
-                  ID: <input name="whiskey[id]" type="text" placeholder="ID"><br>
-                  Name: <input name="whiskey[name]" type="text" placeholder="Name"><br>
-                  Type: <input name="whiskey[type]" type="text" placeholder="Type"><br>
-                  Country: <input name="whiskey[country]" type="text" placeholder="Country"><br>
-                  Price: <input name="whiskey[price]" type="text" placeholder="Price"><br>
-                  Comments: <textarea type="text" id="update-textbox" name="whiskey[comments]" class="update-textbox" placeholder="Comments"></textarea>
+                <form id="update-whiskey" class="form" style="display: block;margin:0 auto;padding:5px;">
+                  ID: <input name="whiskey[id]" type="text" placeholder="ID" style="width:90%;"><br>
+                  Name: <input name="whiskey[name]" type="text" placeholder="Name" style="width:90%;"><br>
+                  Type: <input name="whiskey[type]" type="text" placeholder="Type" style="width:90%;"><br>
+                  Country: <input name="whiskey[country]" type="text" placeholder="Country" style="width:90%;"><br>
+                  Price: <input name="whiskey[price]" type="text" placeholder="Price" style="width:90%;"><br>
+                  Comments: <textarea type="text" name="whiskey[comments]" class="update-textbox" placeholder="Comments" style="width:90%;"></textarea>
                   <!-- Comments: <input name="whiskey[comments]" type="text" placeholder="comments"><br> -->
                   <button id="save-changes" class="form" style="background:#ede8d8;color:black;">Update Whiskey</button>
                 </form>
