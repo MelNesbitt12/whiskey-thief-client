@@ -2,7 +2,7 @@
 
 Whiskey Thief is a single page application designed to allow users to store, view, and update information about their favorite whiskeys. A "whiskey thief" is a tool that master distillers use to extract small portions of whiskey from aging barrels for sampling. This application serves as a whiskey thief of sorts, allowing users to "sample" information about whiskeys they've tried. This application works with a backend API - see deployed site link under "Important Links".
 
-I came up with this idea after spending the last year collecting over 50 bottles of whiskey with my husband. We are somewhat obsessed. I thought it would be fun and useful to have a way of storing information about the bottles we own, as well as basic information about what stood out to me about each whiskey (I've tried a lot, and can't remember them all!).
+I came up with this idea after spending the last year collecting over 50 bottles of whiskey with my husband. We are somewhat obsessed. I thought it would be fun and useful to have a way of storing information about the bottles we own, as well as basic information about what stood out to me about each whiskey (I've tried a lot, and can't remember them all!). I would like this application to eventually allow users to view and comment on each other's whiskey shelves. 
 
 ## Important Links
 
