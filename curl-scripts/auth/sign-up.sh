@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://rocky-fjord-04258.herokuapp.com" \
+curl "http://localhost:4741/sign-up"\
   --include \
   --request POST \
   --header "Content-type: application/json" \

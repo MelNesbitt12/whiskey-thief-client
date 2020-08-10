@@ -42,21 +42,6 @@ const indexWhiskeyFailure = function () {
   $('#message').text('Could not get your whiskey shelf')
 }
 
-// if showWhiskey ajax request is successful, send success message and use #all-whiskeys div to display selected whiskey
-const showWhiskeySuccess = function (response) {
-  store.whiskey = response.whiskey
-  const showWhiskeyHTML = showWhiskeyTemplate({ whiskey: response.whiskey })
-  $('#all-whiskeys').show()
-  $('#all-whiskeys').append(showWhiskeyHTML)
-  $('#one-whiskey').show()
-  $('#update-whiskey').show()
-}
-
-// if showWhiskey ajax request fails, show failure message
-const showWhiskeyFailure = function () {
-  $('#message').text('Could not view whiskey')
-}
-
 // if updateWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
 const updateWhiskeySuccess = function (response) {
   $('#update-button').modal('hide')
@@ -96,8 +81,6 @@ module.exports = {
   createWhiskeyFailure,
   indexWhiskeySuccess,
   indexWhiskeyFailure,
-  showWhiskeySuccess,
-  showWhiskeyFailure,
   updateWhiskeySuccess,
   updateWhiskeyFailure,
   deleteWhiskeySuccess,
