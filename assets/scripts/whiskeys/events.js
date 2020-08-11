@@ -34,8 +34,10 @@ const onUpdate = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
+  const whiskeyId = formData.whiskey.id
 
   api.updateWhiskey(formData)
+    .then(() => onIndex(event))
     .then(ui.updateWhiskeySuccess)
     .catch(ui.updateWhiskeyFailure)
 }
@@ -46,6 +48,7 @@ const onDelete = function (event) {
   const whiskeyId = $(event.target).closest('section').data('id')
 
   api.deleteWhiskey(whiskeyId)
+    .then(() => onIndex(event))
     .then(ui.deleteWhiskeySuccess)
     .catch(ui.deleteWhiskeyFailure)
 }
