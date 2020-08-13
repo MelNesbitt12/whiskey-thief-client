@@ -5,7 +5,6 @@ const store = require('../store')
 const signUpSuccess = function () {
   $('#myModalTwo').modal('show')
   $('#message').empty()
-  $('.unauthenticated').hide()
   $('.sign-in-field').show()
   $('form').trigger('reset')
 }
