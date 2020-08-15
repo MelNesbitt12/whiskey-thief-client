@@ -41,8 +41,9 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  $('#message').show()
-  $('#message').text('You\'ve changed your password!')
+  $('#myModalSix').modal('show')
+  // $('#message').show()
+  // $('#message').text('You\'ve changed your password!')
   $('form').trigger('reset')
 }
 

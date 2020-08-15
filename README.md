@@ -6,9 +6,9 @@ I came up with this idea after spending the last year collecting over 50 bottles
 
 ## Important Links
 
-* [Whiskey Thief API Repo] https://github.com/MelNesbitt12/whiskey-thief-api
-* [Deployed Whiskey Thief API] https://rocky-fjord-04258.herokuapp.com/
-* [Deployed Whiskey Thief Client Application] https://melnesbitt12.github.io/whiskey-thief-client/
+- [Whiskey Thief API Repo] (https://github.com/MelNesbitt12/whiskey-thief-api)
+- [Deployed Whiskey Thief API] (https://rocky-fjord-04258.herokuapp.com/)
+- [Deployed Whiskey Thief Client Application] (https://melnesbitt12.github.io/whiskey-thief-client/)
 
 ## Planning Story
 
@@ -21,27 +21,27 @@ Front end styling came next: I created sign up, sign in, change password, and si
 My stretch goals for this project were to make use of modals in some way, which I was able to do a number of times. I added modals to update users when they sign up, sign in, update and delete a resource.
 
 My problem-solving/debugging strategy consisted of:
-  * Going to the documentation
-  * Searching online for information to help solve the issue
-  * Trial and error, making use of the console and developer tools to figure out where my issues were coming from
-  * Issue queue
+  - Going to the documentation
+  - Searching online for information to help solve the issue
+  - Trial and error, making use of the console and developer tools to figure out where my issues were coming from
+  - Issue queue
 
 ### User Stories
 
-* As a user, I need to be able to sign in, create an account, sign out, and change my password.
-* As a user, I need to be able to add new whiskeys to my whiskey shelf.
-* As a user, I need to be able to update information about my whiskeys, including adding comments specific to each whiskey.
-* As a user, I need to be able to see a list of all whiskeys that I've tried.
-* As a user, I need to be able to delete whiskeys from my account.
+- As a user, I need to be able to sign in, create an account, sign out, and change my password.
+- As a user, I need to be able to add new whiskeys to my whiskey shelf.
+- As a user, I need to be able to update information about my whiskeys, including adding comments specific to each whiskey.
+- As a user, I need to be able to see a list of all whiskeys that I've tried.
+- As a user, I need to be able to delete whiskeys from my account.
 
 ### Technologies Used
 My Whiskey Thief application was built with:
-  * Handlebars
-  * Bootstrap
-  * HTML
-  * CSS
-  * Javascript
-  * Ajax
+  - Handlebars
+  - Bootstrap
+  - HTML
+  - CSS
+  - Javascript
+  - Ajax
 
 ### Unsolved Problems
 I have a mix of modals and text appearing on the page itself to update my users, so I'd like to put all messages into modals in a future version of my project.
@@ -57,7 +57,7 @@ My page does not render properly on a mobile device, so adding mobile responsive
 ## Images:
 
 #### Wireframe:
-![Whiskey Thief Client Wireframe] https://imgur.com/a/VJGwNSA
+![Whiskey Thief Client Wireframe] (https://imgur.com/a/VJGwNSA)
 
 
 ---

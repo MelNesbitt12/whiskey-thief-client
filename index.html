@@ -34,34 +34,42 @@
       </form>
     </div>
 
+    <form id="whiskey-index" class="authenticated">
+        <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
+    </form>
+
     <div class="row-two">
-      <form id="change-password" class="authenticated">
+      <form id="change-password" class="authenticated" style="height:300px; width:400px; margin-right: 200px;">
           <p>Change Your Password</p>
           <input name="passwords[old]" placeholder="old password" type="password">
           <input name="passwords[new]" placeholder="new password" type="password"><br>
           <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
       </form>
 
-      <form id="create-whiskey" class="authenticated">
+      <form id="create-whiskey" class="authenticated" style="width:400px;">
           <p>Add A Whiskey To Your Shelf</p>
           <input name="whiskey[name]" type="text" placeholder="Name">
           <input name="whiskey[type]" type="text" placeholder="Type">
           <input name="whiskey[country]" type="text" placeholder="Country">
-          <input name="whiskey[price]" type="text" placeholder="Price">
+          <input name="whiskey[price]" type="text" placeholder="Price: ex.55">
           <textarea type="text" name="whiskey[comments]" class="create-textbox" placeholder="Comments" style="margin-bottom: -15px;"></textarea>
           <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin-bottom:5px;">Add</button>
       </form>
     </div>
 
-    <form id="whiskey-index" class="authenticated">
+    <!-- <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
-    </form>
+    </form> -->
 
-  <div class="update-wrapper">
+
+  <!-- <div class="update-wrapper">
       <button class="update-button authenticated btn-lg" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
-  </div>
-
+  </div> -->
       <div id="all-whiskeys" class="authenticated"></div><br>
+
+      <div class="update-wrapper">
+          <button class="update-button authenticated btn-lg" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
+      </div>
 
     <!-- Begin Modals-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
@@ -124,12 +132,12 @@
               </div>
               <div class="modal-body">
                 <form id="update-whiskey" class="form" style="display:block;margin:0 auto;position:relative; top: 5px;padding:5px;">
-                  ID: <input name="whiskey[id]" type="text" placeholder="ID" style="width:90%;"><br>
-                  Name: <input name="whiskey[name]" type="text" placeholder="Name" style="width:90%;"><br>
-                  Type: <input name="whiskey[type]" type="text" placeholder="Type" style="width:90%;"><br>
-                  Country: <input name="whiskey[country]" type="text" placeholder="Country" style="width:90%;"><br>
-                  Price: <input name="whiskey[price]" type="text" placeholder="Price" style="width:90%;"><br>
-                  Comments: <textarea type="text" name="whiskey[comments]" class="update-textbox" placeholder="Comments" style="width:90%;"></textarea>
+                  <input name="whiskey[id]" type="text" placeholder="ID - required!" style="width:90%;"><br>
+                  <input name="whiskey[name]" type="text" placeholder="Name" style="width:90%;"><br>
+                  <input name="whiskey[type]" type="text" placeholder="Type" style="width:90%;"><br>
+                  <input name="whiskey[country]" type="text" placeholder="Country" style="width:90%;"><br>
+                  <input name="whiskey[price]" type="text" placeholder="Price" style="width:90%;"><br>
+                  <textarea type="text" name="whiskey[comments]" class="update-textbox" placeholder="Comments" style="width:90%;"></textarea>
                   <button id="save-changes" class="form btn btn-info btn-lg" style="background:#ede8d8;color:black;">Update Whiskey</button>
                 </form>
               <div class="modal-footer">
@@ -148,7 +156,7 @@
                 <h4 class="modal-title">Bottle's Empty - You've Deleted a Whiskey!</h4>
               </div>
               <div class="modal-body">
-                <p>Time to add more bottles!</p>
+                <p>Time to add more!</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -156,6 +164,41 @@
             </div>
           </div>
         </div>
+
+        <div class="modal fade" id="myModalSix" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You've Changed Your Password!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Now don't forget it!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModalSeven" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">Whiskey Updated!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Need to update any others? Grab their ID first!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <!-- End Modals-->
 
     <footer>
