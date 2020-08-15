@@ -1,12 +1,11 @@
 'use store'
-
 const store = require('../store')
 const showWhiskeyTemplate = require('../templates/whiskey-listing2.handlebars')
 
 // if createWhiskey ajax request is successful, load success message, empty #all-whiskeys div to ensure that index is reset
 const createWhiskeySuccess = function () {
   $('#myModalThree').modal('show')
-  $('#message').text('Check out your shelf!')
+  // $('#message').text('Check out your shelf!')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
@@ -46,9 +45,8 @@ const indexWhiskeyFailure = function () {
 const updateWhiskeySuccess = function (response) {
   $('#update-button').modal('hide')
   $('.update-wrapper').hide()
-  // $('#message').text('Whiskey updated - check out your shelf!')
-  $('#myModalFour').modal('hide')
   $('#myModalSeven').modal('show')
+  $('#myModalFour').modal('hide')
   $('form').trigger('reset')
   $('#all-whiskeys').hide()
   $('#all-whiskeys').empty()
