@@ -13,8 +13,8 @@ const onCreate = function (event) {
   const formData = getFormFields(form)
 
   api.createWhiskey(formData)
+    .then(() => onIndex(event))
     .then(ui.createWhiskeySuccess)
-    .then($('#see-whiskeys').click())
     .catch(ui.createWhiskeyFailure)
 }
 
