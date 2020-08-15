@@ -62,9 +62,8 @@ const updateWhiskeyFailure = function () {
 // if deleteWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
 const deleteWhiskeySuccess = function () {
   $('#myModalFive').modal('show')
-  $('#message').text('Check out your shelf!')
+  // $('#message').text('Check out your shelf!')
   $('#all-whiskeys').hide()
-  $('#all-whiskeys').empty()
   $('#see-whiskeys').show()
   $('.update-wrapper').hide()
 }
