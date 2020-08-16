@@ -23,7 +23,7 @@ const indexWhiskeySuccess = function (response) {
   const showWhiskeyHTML = showWhiskeyTemplate({ whiskeys: response.whiskeys })
   if (response.whiskeys.length === 0) {
     $('#message').text('Your shelf is bone dry - better add something to it!')
-    $('.all-whiskeys').hide()
+    $('#all-whiskeys').hide()
   } else {
     $('#message').text('Your shelf is looking GOOD.')
     $('#all-whiskeys').empty()
@@ -59,6 +59,7 @@ const updateWhiskeyFailure = function () {
 // if deleteWhiskey ajax request is successful, reset #all-whiskeys div so that upon clicking #see-whiskeys button, updated index is displayed
 const deleteWhiskeySuccess = function () {
   $('#myModalFive').modal('show')
+  $('#all-whiskeys').hide()
   $('#see-whiskeys').show()
   $('.update-wrapper').hide()
 }
