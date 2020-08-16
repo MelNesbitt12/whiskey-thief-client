@@ -6,9 +6,9 @@ I came up with this idea after spending the last year collecting over 50 bottles
 
 ## Important Links
 
-- [Whiskey Thief API Repo] (https://github.com/MelNesbitt12/whiskey-thief-api)
-- [Deployed Whiskey Thief API] (https://rocky-fjord-04258.herokuapp.com/)
-- [Deployed Whiskey Thief Client Application] (https://melnesbitt12.github.io/whiskey-thief-client/)
+[Whiskey Thief API Repo](https://github.com/MelNesbitt12/whiskey-thief-api)
+[Deployed Whiskey Thief API](https://rocky-fjord-04258.herokuapp.com/)
+[Deployed Whiskey Thief Client Application](https://melnesbitt12.github.io/whiskey-thief-client/)
 
 ## Planning Story
 
@@ -44,20 +44,31 @@ My Whiskey Thief application was built with:
   - Ajax
 
 ### Unsolved Problems
-I have a mix of modals and text appearing on the page itself to update my users, so I'd like to put all messages into modals in a future version of my project.
+*Version 2:*
+- I have a mix of modals and text appearing on the page itself to update my users, so I'd like to put all messages into modals in a future version of my project.
 
-I want to put my "Add a Whiskey to your Shelf" form into a modal to be consistent with my use of a modal for my "Update a Whiskey" form.
+- I will put 'Change your Password' and 'Add a Whiskey to Your Shelf' into a nav bar
 
-Users need to copy and paste the ID of the whiskey they would like to change into the Update Whiskey form, which feels cumbersome. I tried using handlebars to add an update button to each individual whiskey; while I was able to successfully send the PATCH request through by clicking the update button, the modal I was using to store the update form never fully closed. In a future version of this project, I'd like to tackle this issue.
+- Upon clicking "Change Password" or "Add a Whiskey to your Shelf" from the nav bar, modals with forms will appear, allowing the user to update their password/add a whiskey directly within the modal.
 
-Right now, users can only see the full list of whiskeys on their shelves. In a future version of this project, I would like to give users the ability to view just one whiskey at a time.
+- Users need to copy and paste the ID of the whiskey they would like to change into the Update Whiskey form, which feels cumbersome. I tried using handlebars to add an update button to each individual whiskey; while I was able to successfully send the PATCH request through by clicking the update button, the modal I was using to store the update form never fully closed.
 
-My page does not render properly on a mobile device, so adding mobile responsive design will be a focus for a future version.
+- Right now, users can only see the full list of whiskeys on their shelves. In a future version of this project, I would like to give users the ability to view just one whiskey at a time.
+
+*Version 3:*
+- My page does not render properly on a mobile device, so adding mobile responsive design will be a focus for a future version.
+
+- I will give users the option to include photos of their whiskeys when adding a whiskey to their shelf
+
+*Version 4:*
+- I will create a User model so that users can have their own profiles on the site
+- Users will be able to comment on other users' posts
+- The app will make recommendations for other whiskeys to try based on users' posts
 
 ## Images:
 
 #### Wireframe:
-![Whiskey Thief Client Wireframe] (https://imgur.com/a/VJGwNSA)
+![Whiskey Thief Client Wireframe](https://imgur.com/a/VJGwNSA)
 
 
 ---
