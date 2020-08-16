@@ -6,9 +6,9 @@ I came up with this idea after spending the last year collecting over 50 bottles
 
 ## Important Links
 
--[Whiskey Thief API Repo](https://github.com/MelNesbitt12/whiskey-thief-api)
--[Deployed Whiskey Thief API](https://rocky-fjord-04258.herokuapp.com/)
--[Deployed Whiskey Thief Client Application](https://melnesbitt12.github.io/whiskey-thief-client/)
+- [Whiskey Thief API Repo](https://github.com/MelNesbitt12/whiskey-thief-api)
+- [Deployed Whiskey Thief API](https://rocky-fjord-04258.herokuapp.com/)
+- [Deployed Whiskey Thief Client Application](https://melnesbitt12.github.io/whiskey-thief-client/)
 
 ## Planning Story
 
