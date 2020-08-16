@@ -14,9 +14,9 @@
     </head>
     <body>
       <h1>Whiskey Thief: Your Virtual Whiskey Collection</h1><br>
-
+  <!-- Success and failure messages -->
       <p id="message" class="not-started"></p>
-
+<!-- Form to sign up-->
     <div class="row">
       <form id="sign-up" class="unauthenticated sign-up-field column">
           <p id="new-user">Start A Whiskey Shelf</p>
@@ -25,7 +25,7 @@
           <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
           <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
         </form>
-
+<!-- Form to sign in-->
       <form id="sign-in" class="unauthenticated sign-in-field column">
           <p id="returning-user">Your Shelf Is Waiting</p>
           <input name="credentials[email]" placeholder="email here" type="email">
@@ -33,11 +33,11 @@
           <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
       </form>
     </div>
-
+<!-- Index Whiskeys button-->
     <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
     </form>
-
+<!-- Change password and add whiskey forms-->
     <div class="row-two">
       <form id="change-password" class="authenticated" style="height:300px; width:400px; margin-right: 200px;">
           <p>Change Your Password</p>
@@ -56,9 +56,9 @@
           <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin-bottom:5px;">Add</button>
       </form>
     </div>
-
+<!-- Div to hold indexed whiskeys via handlebars-->
       <div id="all-whiskeys" class="authenticated"></div><br>
-
+<!-- Update whiskey button - triggers modal-->
       <div class="update-wrapper">
           <button class="update-button authenticated btn-lg" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
       </div>
@@ -82,7 +82,7 @@
           </div>
         </div>
 
-        <div class="modal fade" id="myModalTwo" role="dialog">
+        <div class="modal" id="myModalTwo" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -99,7 +99,7 @@
           </div>
         </div>
 
-        <div class="modal fade" id="myModalThree" role="dialog">
+        <div class="modal" id="myModalThree" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -140,7 +140,7 @@
            </div>
          </div>
 
-        <div class="modal fade" id="myModalFive" role="dialog">
+        <div class="modal" id="myModalFive" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -157,7 +157,7 @@
           </div>
         </div>
 
-        <div class="modal fade" id="myModalSix" role="dialog">
+        <div class="modal" id="myModalSix" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -174,7 +174,7 @@
           </div>
         </div>
 
-        <div class="modal fade" id="myModalSeven" role="dialog">
+        <div class="modal" id="myModalSeven" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -192,7 +192,7 @@
         </div>
 
       <!-- End Modals-->
-
+  <!-- Sign out button-->
     <footer>
       <form id="sign-out" class="authenticated">
           <button id="sign-out-button" type="submit" class="btn btn-info btn-md">Sign Out</button>

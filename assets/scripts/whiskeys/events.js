@@ -34,7 +34,7 @@ const onUpdate = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  const whiskeyId = formData.whiskey.id
+  // const whiskeyId = formData.whiskey.id
 
   api.updateWhiskey(formData)
     .then(() => onIndex(event))
