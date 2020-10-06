@@ -22,15 +22,16 @@ body {
 }
 
 .unauthenticated {
-  background-color: #748988;
-  border: 5px solid white;
+  // background-color: #748988;
+  // border: 5px solid white;
   border-radius: 20px;
   flex: 50%;
-  margin-top: 50px;
+  // margin-top: 50px;
   padding: 20px;
 }
 
-.row {
+.card {
+  background-color: #748988;
   display: flex;
   color: white;
   font-size: 30px;
@@ -41,28 +42,27 @@ body {
   text-shadow: 2px 2px rgba(0, 0, 0, .25);
 }
 
-.row-two {
-  display: flex;
-  align-content: space-between;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 auto;
-  justify-content: center;
-}
+// .row-two {
+//   display: flex;
+//   align-content: space-between;
+//   color: white;
+//   font-size: 15px;
+//   font-weight: bold;
+//   margin: 0 auto;
+//   justify-content: center;
+// }
 
 #create-whiskey, #change-password {
   background-color: #748988;
-  border: 5px solid white;
+  // border: 5px solid white;
   border-radius: 20px;
   color: white;
   font-size: 30px;
   font-weight: bold;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-top: 10px;
+  margin-bottom: -20px;
   padding: 20px;
-  width:40%;
+  width: 50%;
 }
 
 h1 {

@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
       <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href=
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity=
+      "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
       <title>Whiskey Thief</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,49 +24,80 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+
       <h1>Whiskey Thief: Your Virtual Whiskey Collection</h1><br>
   <!-- Success and failure messages -->
       <p id="message" class="not-started"></p>
+
 <!-- Form to sign up-->
+  <div class="container unauthenticated">
     <div class="row">
-      <form id="sign-up" class="unauthenticated sign-up-field column">
-          <p id="new-user">Start A Whiskey Shelf</p>
-          <input name="credentials[email]" type="email" placeholder="email here">
-          <input name="credentials[password]" type="password" placeholder="password here">
-          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-          <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
-        </form>
-<!-- Form to sign in-->
-      <form id="sign-in" class="unauthenticated sign-in-field column">
-          <p id="returning-user">Your Shelf Is Waiting</p>
-          <input name="credentials[email]" placeholder="email here" type="email">
-          <input name="credentials[password]" placeholder="password here" type="password"><br>
-          <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
-      </form>
+      <div class="col-lg-6 col-lg-offset-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title" style="text-align:center">Start A Whiskey Shelf</h2>
+            <form id="sign-up" class="unauthenticated sign-up-field column">
+            <!-- <p id="new-user">Start A Whiskey Shelf</p> -->
+            <input class="form-control" name="credentials[email]" type="email" placeholder="email here" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="password here" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password" style="padding:10px; font-size:20px;">
+            <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
+          </form>
+      </div>
     </div>
+  </div>
+<!-- Form to sign in-->
+  <div class="col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title" style="text-align:center">Your Shelf Is Waiting</h2>
+        <form id="sign-in" class="unauthenticated sign-in-field column">
+          <input class="form-control" name="credentials[email]" placeholder="email here" type="email" style="padding:10px; font-size:20px;">
+          <input class="form-control" name="credentials[password]" placeholder="password here" type="password" style="padding:10px; font-size:20px;">
+          <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <!-- Index Whiskeys button-->
     <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
     </form>
 <!-- Change password and add whiskey forms-->
-    <div class="row-two">
-      <form id="change-password" class="authenticated" style="height:300px; width:400px; margin-right: 200px;">
-          <p>Change Your Password</p>
-          <input name="passwords[old]" placeholder="old password" type="password">
-          <input name="passwords[new]" placeholder="new password" type="password"><br>
-          <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
-      </form>
-
-      <form id="create-whiskey" class="authenticated" style="width:400px;">
-          <p>Add A Whiskey To Your Shelf</p>
-          <input name="whiskey[name]" type="text" placeholder="Name">
-          <input name="whiskey[type]" type="text" placeholder="Type">
-          <input name="whiskey[country]" type="text" placeholder="Country">
-          <input name="whiskey[price]" type="text" placeholder="Price: ex.55">
-          <textarea type="text" name="whiskey[comments]" class="create-textbox" placeholder="Comments" style="margin-bottom: -15px;"></textarea>
-          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin-bottom:5px;">Add</button>
-      </form>
+<div class="container authenticated">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-6 mb-4">
+      <div class="card">
+        <div class="card-body" style="margin-top: 10px;">
+    <!-- <div class="row-two"> -->
+      <h2 class="card-title" style="text-align:center">Change Your Password</h2>
+        <form id="change-password" class="authenticated" style="position:relative; width:400px;">
+            <input name="passwords[old]" placeholder="old password" type="password" style="padding:10px; font-size:20px;">
+            <input name="passwords[new]" placeholder="new password" type="password" style="padding:10px; font-size:20px;"><br>
+            <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
+        </form>
+      </div>
     </div>
+  </div>
+  <div class="col-lg-6 col-lg-offset-6 mb-4">
+    <div class="card" style="width:fit-content;">
+      <div class="card-body" style="margin-top:10px;">
+        <h2 class="card-title" style="text-align:center">Add A Whiskey To Your Shelf</h2>
+        <form id="create-whiskey" class="authenticated" style="position: relative; width: 400px; margin-top:10px;">
+            <input class="form-control" name="whiskey[name]" type="text" placeholder="Name" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="whiskey[type]" type="text" placeholder="Type" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="whiskey[country]" type="text" placeholder="Country" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55" style="padding:10px; font-size:20px;">
+            <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments" style="padding:10px; font-size:20px;"></textarea>
+            <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin:5px;">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <!-- Div to hold indexed whiskeys via handlebars-->
       <div id="all-whiskeys" class="authenticated"></div><br>
 
@@ -191,7 +233,6 @@
             </div>
           </div>
         </div>
-
       <!-- End Modals-->
   <!-- Sign out button-->
     <footer>
