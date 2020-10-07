@@ -3,7 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const createWhiskey = function (formData) {
+const createWhiskey = (formData) => {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -14,7 +14,7 @@ const createWhiskey = function (formData) {
   })
 }
 
-const indexWhiskey = function () {
+const indexWhiskey = () => {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -27,19 +27,19 @@ const indexWhiskey = function () {
   })
 }
 
-const updateWhiskey = function (formData) {
-  const newWhiskeyId = formData.whiskey.id
+const updateWhiskey = (formData, whiskeyId) => {
+  // const newWhiskeyId = formData.whiskey.id
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    url: config.apiUrl + '/whiskeys/' + newWhiskeyId,
+    url: config.apiUrl + '/whiskeys/' + whiskeyId,
     method: 'PATCH',
     data: formData
   })
 }
 
-const deleteWhiskey = function (whiskeyId) {
+const deleteWhiskey = (whiskeyId) => {
   return $.ajax({
     headers: {
       Authorization: 'Bearer ' + store.user.token

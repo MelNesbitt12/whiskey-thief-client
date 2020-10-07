@@ -17,6 +17,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+  @media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+  }
+}
+
 .authenticated {
   display: none;
 }
@@ -62,7 +68,8 @@ body {
   margin-top: 10px;
   margin-bottom: -20px;
   padding: 20px;
-  width: 50%;
+  position: relative;
+  width: 400px;
 }
 
 h1 {
@@ -85,11 +92,20 @@ input {
   margin-bottom: 5px;
 }
 
+.form-control {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card-title {
+  text-align: center;
+}
+
 #update-whiskey {
   background: #748988;
   border: 5px solid white;
   border-radius: 20px;
-  color: white;
+  color: black;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -98,6 +114,36 @@ input {
   position: relative;
   bottom: 20px;
   width: 70%;
+}
+
+.update-whiskey {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding: 5px;
+  top: 5px;
+  width: 90%;
+}
+
+.update-modal-header {
+  background: #ede8d8;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.update-modal-title {
+  color: black;
+}
+
+.save-changes {
+  background: #ede8d8;
+  color: black;
+}
+
+.delete-button, .update-button {
+  background: #ede8d8;
+  color: black;
+  font-size: 20px;
 }
 
 #all-whiskeys {
@@ -123,6 +169,8 @@ input {
 #password, #create-whiskey-button, #update-button, #sign-out-button {
   background:#ede8d8;
   color: black;
+  // margin: 5px;
+  padding: 10px;
 }
 
 #see-whiskeys {
