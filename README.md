@@ -1,4 +1,5 @@
 # Whiskey Thief Client
+![Whiskey Thief App](https://user-images.githubusercontent.com/59749085/95343338-664e9d00-0886-11eb-8974-ac23c1288d67.png)
 
 Whiskey Thief is a single page application designed to allow users to store, view, and update information about their favorite whiskeys. A "whiskey thief" is a tool that master distillers use to extract small portions of whiskey from aging barrels for sampling. This application serves as a whiskey thief of sorts, allowing users to "sample" information about whiskeys they've tried. This application works with a backend API - see deployed site link under "Important Links".
 
@@ -43,6 +44,46 @@ My Whiskey Thief application was built with:
   - Javascript
   - Ajax
 
+  ## Tasks
+
+  `npm` is used as a task runner for this project. These are the commands available:
+
+  | Command                | Effect                                                                                                      |
+  |------------------------|-------------------------------------------------------------------------------------------------------------|
+  | `npm run server`       | Starts a development server with `nodemon` that automatically refreshes when you change something.                                                                                         |
+  | `npm test`             | Runs automated tests.                                                                                       |
+  | `npm run debug-server` | Starts the server in debug mode, which will print lots of extra info about what's happening inside the app. |
+
+  Developers should run these often!
+
+  - `npm run nag`: runs code quality analysis tools on your code and complains.
+  - `npm run make-standard`: reformats all your code in the JavaScript Standard
+    Style.
+  - `npm run start`: generates bundles, watches, and livereloads.
+  - `npm run build`: place bundled styles and scripts where `index.html` can find
+      them
+  - `npm run deploy`: builds and deploys master branch
+
+  ### Authentication Routes
+
+  | Verb   | URI Pattern            | Controller#Action |
+  |--------|------------------------|-------------------|
+  | POST   | `/sign-up`             | `users#signup`    |
+  | POST   | `/sign-in`             | `users#signin`    |
+  | PATCH  | `/change-password/`    | `users#changepw`  |
+  | DELETE | `/sign-out/`           | `users#signout`   |
+
+  ### Resource Routes
+
+  | Verb   | URI Pattern            | Controller#Action |
+  |--------|------------------------|-------------------|
+  | GET    | `/whiskeys`            | `whiskeys#index`  |
+  | GET    | `/whiskeys/:id`        | `whiskey#show`    |
+  | POST   | `/whiskeys/create-whiskey`| `whiskey#create`|
+  | PATCH  | `/whiskeys/:id/update` | `whiskey#update`  |
+  | DELETE | `/whiskeys/:id`        | `whiskey#delete`  |
+
+
 ### Unsolved Problems
 *Version 2:*
 - I have a mix of modals and text appearing on the page itself to update my users, so I'd like to put all messages into modals in a future version of my project.
@@ -63,10 +104,9 @@ My Whiskey Thief application was built with:
 - Users will be able to comment on other users' posts
 - The app will make recommendations for other whiskeys to try based on users' posts
 
-## Images:
-
 #### Wireframe:
-[Whiskey Thief Client Wireframe](https://imgur.com/a/VJGwNSA)
+![Whiskey Thief Client Wireframe: Part 1](https://user-images.githubusercontent.com/59749085/95343702-d5c48c80-0886-11eb-83cd-f59a12dca4be.jpg)
+![Whiskey Thief Client Wireframe: Part 2](https://user-images.githubusercontent.com/59749085/95343720-d9f0aa00-0886-11eb-9742-2e25a5dc07b2.jpg)
 
 
 ---
