@@ -3,15 +3,43 @@
     <div class="col-lg-4">
       <div class="card narrower columns" style="background:#748988; margin-top:10px;">
   <div class="card-body card-body-cascade">
-    <section class ='card-title' data-id="{{whiskey._id}}">
-      <h5 style="font-size:30px;">ID: {{whiskey._id}}</h5>
-      <h6 style="font-size:30px;">Name: {{whiskey.name}}</h6>
-      <h6 style="font-size:25px;">Type: {{whiskey.type}}</h6>
-      <h6 style="font-size:25px;">Country: {{whiskey.country}}</h6>
-      <h6 style="font-size:25px;">Price: {{whiskey.price}}</h6>
-      <h6 style="font-size:25px;">Comments: {{whiskey.comments}}</h6>
+    <section class="card-title" data-id="{{whiskey._id}}">
+      <h3>ID: {{whiskey._id}}</h3>
+      <h4>Name: {{whiskey.name}}</h4>
+      <h4>Type: {{whiskey.type}}</h4>
+      <h4>Country: {{whiskey.country}}</h4>
+      <h4>Price: {{whiskey.price}}</h4>
+      <h4>Comments: {{whiskey.comments}}</h4>
 
-      <button class="delete-button btn-info btn-md" data-id="{{whiskey._id}}" style="background:#ede8d8;color:black;font-size:20px;">Delete</button>
+      <button class="delete-button btn-info btn-md" data-id="{{whiskey._id}}">Delete</button>
+      <button class="update-button btn-info btn-md" data-id="{{whiskey._id}}" data-toggle="modal" data-target="#myModalFour-{{whiskey._id}}">Update</button>
+
+      <!--Update Whiskey Modal-->
+      <div id="myModalFour-{{whiskey._id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="updateWhiskeyLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="update-modal-header">
+              <h2 class="update-modal-title">Update Your Whiskey</h2>
+            </div>
+            <div class="modal-body">
+
+              <form class="update-whiskey" data-id={{whiskey._id}}>
+                <input name="whiskey[id]" type="text" placeholder="{{whiskey._id}}"><br>
+                <input name="whiskey[name]" type="text" placeholder="{{whiskey.name}}"><br>
+                <input name="whiskey[type]" type="text" placeholder="{{whiskey.type}}" ><br>
+                <input name="whiskey[country]" type="text" placeholder="{{whiskey.country}}"><br>
+                <input name="whiskey[price]" type="text" placeholder="{{whiskey.price}}"><br>
+                <textarea type="text" name="whiskey[comments]" class="update-textbox" placeholder="{{whiskey.comments}}"></textarea>
+                <button type="submit" class="save-changes" class="form btn btn-info btn-lg">Update Whiskey</button>
+              </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+           </div>
+          </div>
+         </div>
+       </div>
+       <!--End whiskey update modal-->
     </section>
     </div>
   </div>

@@ -29,31 +29,31 @@
   <!-- Success and failure messages -->
       <p id="message" class="not-started"></p>
 
-<!-- Form to sign up-->
+<!--Sign Up Form-->
   <div class="container unauthenticated">
     <div class="row">
       <div class="col-lg-6 col-lg-offset-6 mb-4">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title" style="text-align:center">Start A Whiskey Shelf</h2>
+            <h2 class="card-title">Start A Whiskey Shelf</h2>
             <form id="sign-up" class="unauthenticated sign-up-field column">
-            <!-- <p id="new-user">Start A Whiskey Shelf</p> -->
-            <input class="form-control" name="credentials[email]" type="email" placeholder="email here" style="padding:10px; font-size:20px;">
-            <input class="form-control" name="credentials[password]" type="password" placeholder="password here" style="padding:10px; font-size:20px;">
-            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password" style="padding:10px; font-size:20px;">
+            <input class="form-control" name="credentials[email]" type="email" placeholder="email here">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="password here">
+            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password">
             <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
           </form>
       </div>
     </div>
   </div>
-<!-- Form to sign in-->
+
+<!--Sign In Form-->
   <div class="col-lg-6 mb-4">
     <div class="card">
       <div class="card-body">
-        <h2 class="card-title" style="text-align:center">Your Shelf Is Waiting</h2>
+        <h2 class="card-title">Your Shelf Is Waiting</h2>
         <form id="sign-in" class="unauthenticated sign-in-field column">
-          <input class="form-control" name="credentials[email]" placeholder="email here" type="email" style="padding:10px; font-size:20px;">
-          <input class="form-control" name="credentials[password]" placeholder="password here" type="password" style="padding:10px; font-size:20px;">
+          <input class="form-control" name="credentials[email]" placeholder="email here" type="email">
+          <input class="form-control" name="credentials[password]" placeholder="password here" type="password">
           <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
         </form>
       </div>
@@ -61,52 +61,61 @@
   </div>
 </div>
 </div>
+
 <!-- Index Whiskeys button-->
     <form id="whiskey-index" class="authenticated">
         <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
     </form>
+
 <!-- Change password and add whiskey forms-->
 <div class="container authenticated">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-6 mb-4">
       <div class="card">
         <div class="card-body" style="margin-top: 10px;">
-    <!-- <div class="row-two"> -->
-      <h2 class="card-title" style="text-align:center">Change Your Password</h2>
-        <form id="change-password" class="authenticated" style="position:relative; width:400px;">
-            <input name="passwords[old]" placeholder="old password" type="password" style="padding:10px; font-size:20px;">
-            <input name="passwords[new]" placeholder="new password" type="password" style="padding:10px; font-size:20px;"><br>
+
+    <!--Change Password Form-->
+      <h2 class="card-title">Change Your Password</h2>
+        <form id="change-password" class="authenticated">
+            <input class="form-control" name="passwords[old]" placeholder="old password" type="password">
+            <input class="form-control" name="passwords[new]" placeholder="new password" type="password">
             <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
         </form>
       </div>
     </div>
   </div>
+  <!--Add A Whiskey Form-->
   <div class="col-lg-6 col-lg-offset-6 mb-4">
     <div class="card" style="width:fit-content;">
       <div class="card-body" style="margin-top:10px;">
-        <h2 class="card-title" style="text-align:center">Add A Whiskey To Your Shelf</h2>
-        <form id="create-whiskey" class="authenticated" style="position: relative; width: 400px; margin-top:10px;">
-            <input class="form-control" name="whiskey[name]" type="text" placeholder="Name" style="padding:10px; font-size:20px;">
-            <input class="form-control" name="whiskey[type]" type="text" placeholder="Type" style="padding:10px; font-size:20px;">
-            <input class="form-control" name="whiskey[country]" type="text" placeholder="Country" style="padding:10px; font-size:20px;">
-            <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55" style="padding:10px; font-size:20px;">
-            <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments" style="padding:10px; font-size:20px;"></textarea>
-            <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg" style="margin:5px;">Add</button>
+        <h2 class="card-title">Add A Whiskey To Your Shelf</h2>
+        <form id="create-whiskey" class="authenticated">
+            <input class="form-control" name="whiskey[name]" type="text" placeholder="Name">
+            <input class="form-control" name="whiskey[type]" type="text" placeholder="Type">
+            <input class="form-control" name="whiskey[country]" type="text" placeholder="Country">
+            <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55">
+            <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments"></textarea>
+            <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg">Add</button>
         </form>
       </div>
     </div>
   </div>
 </div>
 </div>
+
 <!-- Div to hold indexed whiskeys via handlebars-->
+    <div class="column">
       <div id="all-whiskeys" class="authenticated"></div><br>
+    </div>
 
 <!-- Update whiskey button - triggers modal-->
-      <div class="update-wrapper">
+      <!-- <div class="update-wrapper">
           <button class="update-button authenticated btn-xl" data-toggle="modal" data-target="#myModalFour">Update A Whiskey</button>
-      </div>
+      </div> -->
 
     <!-- Begin Modals-->
+
+    <!--Signed In Modal-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -116,7 +125,6 @@
               </div>
               <div class="modal-body">
                 <p>From here, you can check out the whiskeys on your shelf, add more, or update information about specific bottles.</p>
-                <p>To update, make sure you grab the whiskey's ID first!</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
@@ -125,6 +133,7 @@
           </div>
         </div>
 
+<!--Created New Whiskey Shelf Modal-->
         <div class="modal" id="myModalTwo" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -142,6 +151,7 @@
           </div>
         </div>
 
+<!--Added Whiskey Modal-->
         <div class="modal" id="myModalThree" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -158,8 +168,9 @@
             </div>
           </div>
         </div>
+<!---Update Whiskey Modal-->
 
-        <div id="myModalFour" class="modal fade" tabindex="-1" role="dialog">
+        <!-- <div id="myModalFour" class="modal fade" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header" style="background:#ede8d8;margin:0 auto;padding:10px;">
@@ -173,7 +184,7 @@
                   <input name="whiskey[country]" type="text" placeholder="Country" style="width:90%;"><br>
                   <input name="whiskey[price]" type="text" placeholder="Price" style="width:90%;"><br>
                   <textarea type="text" name="whiskey[comments]" class="update-textbox" placeholder="Comments" style="width:90%;"></textarea>
-                  <button id="save-changes" class="form btn btn-info btn-lg" style="background:#ede8d8;color:black;">Update Whiskey</button>
+                  <button class="update-button" class="form btn btn-info btn-lg" style="background:#ede8d8;color:black;">Update Whiskey</button>
                 </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,8 +192,8 @@
              </div>
             </div>
            </div>
-         </div>
-
+         </div> -->
+<!--Deleted Whiskey Modal-->>
         <div class="modal" id="myModalFive" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -200,6 +211,7 @@
           </div>
         </div>
 
+<!-- Changed Password Modal -->
         <div class="modal" id="myModalSix" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -217,6 +229,7 @@
           </div>
         </div>
 
+<!--Whiskey Updated Modal -->
         <div class="modal" id="myModalSeven" role="dialog">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -225,7 +238,7 @@
                 <h4 class="modal-title">Whiskey Updated!</h4>
               </div>
               <div class="modal-body">
-                <p>Need to update any others? Grab their ID first!</p>
+                <p>You're on a roll!</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -234,6 +247,7 @@
           </div>
         </div>
       <!-- End Modals-->
+
   <!-- Sign out button-->
     <footer>
       <form id="sign-out" class="authenticated">

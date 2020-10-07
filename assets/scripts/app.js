@@ -13,7 +13,7 @@ $(() => {
 
   // Whiskey listeners:
   $('#whiskey-index').on('submit', whiskeyEvents.onIndex)
-  $('#update-whiskey').on('submit', whiskeyEvents.onUpdate)
+  $('#all-whiskeys').on('submit', '.update-whiskey', whiskeyEvents.onUpdate)
   $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
   $('#all-whiskeys').on('click', '.delete-button', whiskeyEvents.onDelete)
 })
