@@ -51,8 +51,6 @@ My Whiskey Thief application was built with:
 
 - Upon clicking "Change Password" or "Add a Whiskey to your Shelf" from the nav bar, modals with forms will appear, allowing the user to update their password/add a whiskey directly within the modal.
 
-- Users need to copy and paste the ID of the whiskey they would like to change into the Update Whiskey form, which feels cumbersome. I tried using handlebars to add an update button to each individual whiskey; while I was able to successfully send the PATCH request through by clicking the update button, the modal I was using to store the update form never fully closed.
-
 - Right now, users can only see the full list of whiskeys on their shelves. In a future version of this project, I would like to give users the ability to view just one whiskey at a time.
 
 *Version 3:*
