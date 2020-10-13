@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,
+        initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+      <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href=
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity=
+      "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+      <title>Whiskey Thief</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <h1>Whiskey Thief: Your Virtual Whiskey Collection</h1><br>
+      <!--$$$MESSING WITH NAV-->
+      <!-- <div class="pos-f-t authenticated">
+          <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+              <ul class="navbar-nav">
+                <li class="nav-item addWhiskey">
+                  <a href="/whiskeys" data-toggle="modal" data-target="#myModalWhiskey" class="nav-link">Add New Whiskey</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/change-password" data-toggle="modal" data-target="#myModalPassword" class="nav-link">Change Password</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          <nav class="navbar navbar-light" style="background-color: #748988;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+      </div> -->
+      <!--END NAV-->
+
+  <!-- Success and failure messages -->
+      <p id="message" class="not-started"></p>
+
+<!--Sign Up Form-->
+  <div class="container unauthenticated">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Start A Whiskey Shelf</h2>
+            <form id="sign-up" class="unauthenticated sign-up-field column">
+            <input class="form-control" name="credentials[email]" type="email" placeholder="email here">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="password here">
+            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+            <button id="sign-up-button" type="submit" class="btn btn-info btn-lg">Create Account</button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+<!--Sign In Form-->
+  <div class="col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Your Shelf Is Waiting</h2>
+        <form id="sign-in" class="unauthenticated sign-in-field column">
+          <input class="form-control" name="credentials[email]" placeholder="email here" type="email">
+          <input class="form-control" name="credentials[password]" placeholder="password here" type="password">
+          <button id="sign-in-button" type="submit" class="btn btn-info btn-lg">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Index Whiskeys button-->
+    <form id="whiskey-index" class="authenticated">
+        <button id="see-whiskeys" type="submit" class="btn btn-info btn-lg">See Your Whiskey Shelf</button>
+    </form>
+
+<!-- Change password and add whiskey forms CURRENT-->
+<div class="container authenticated">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-6 mb-4">
+      <div class="card">
+        <div class="card-body" style="margin-top: 10px;">
+
+    <!-- Change Password Form CURRENT-->
+      <h2 class="card-title">Change Your Password</h2>
+        <form id="change-password" class="authenticated">
+            <input class="form-control" name="passwords[old]" placeholder="old password" type="password">
+            <input class="form-control" name="passwords[new]" placeholder="new password" type="password">
+            <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Add A Whiskey Form OLD-->
+  <!-- <div class="col-lg-6 col-lg-offset-6 mb-4">
+    <div class="card" style="width:fit-content;">
+      <div class="card-body" style="margin-top:10px;">
+        <h2 class="card-title">Add A Whiskey To Your Shelf</h2>
+        <form id="create-whiskey" class="authenticated">
+            <input class="form-control" name="whiskey[name]" type="text" placeholder="Name">
+            <input class="form-control" name="whiskey[type]" type="text" placeholder="Type">
+            <input class="form-control" name="whiskey[country]" type="text" placeholder="Country">
+            <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55">
+            <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments"></textarea>
+            <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<!--Add whiskey form with selectors-->
+<div class="col-lg-6 col-lg-offset-6 mb-4 authenticated">
+  <div class="card" style="width:fit-content; margin:0 auto">
+    <div class="card-body" style="margin-top:10px;">
+      <h2 class="card-title">Add A Whiskey To Your Shelf</h2>
+      <form id="create-whiskey" class="authenticated">
+        <label for="whiskeyName">Enter Whiskey Name:</label>
+          <input class="form-control" name="whiskey[name]" type="text" placeholder="Name">
+        <label for="whiskeyType"> Enter Whiskey Type:</label>
+        <select name="whiskey[type]" class="form-control" style="padding:5px">
+          <option value="" disabled selected hidden>Select type</option>
+          <option value="Bourbon">Bourbon</option>
+          <option value="Single Malt">Single Malt</option>
+          <option value="Rye">Rye</option>
+          <option value="Scotch">Scotch</option>
+          <option value="Irish Whiskey">Irish Whiskey</option>
+          <option value="Blended Whiskey">Blended Whiskey</option>
+          <option value="Tennessee Whiskey">Tennessee Whiskey</option>
+          <option value="Japanese Whiskey">Japanese Whiskey</option>
+          <option value="Canadian Whiskey">Canadian Whiskey</option>
+        </select>
+          <!-- <input class="form-control" name="whiskey[type]" type="text" placeholder="Type"> -->
+        <label for="whiskeyCountry">Select Country:</label>
+        <select name="whiskey[country]" class="form-control" style="padding:5px">
+          <option value="" disabled selected hidden>Select country</option>
+          <option value="Bourbon">USA</option>
+          <option value="Single Malt">Scotland</option>
+          <option value="Rye">Ireland</option>
+          <option value="Scotch">Japan</option>
+          <option value="Irish Whiskey">Canada</option>
+        </select>
+          <!-- <input class="form-control" name="whiskey[country]" type="text" placeholder="Country"> -->
+        <label for="whiskeyPrice"> Enter Whiskey Price:</label>
+          <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55" style="padding:5px">
+        <label for="whiskeyComments"> Comments:</label>
+          <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments"></textarea>
+          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Div to hold indexed whiskeys via handlebars-->
+    <div class="column">
+      <div id="all-whiskeys" class="authenticated"></div><br>
+    </div>
+
+    <!-- Begin Modals-->
+
+    <!--Signed In Modal-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You're Signed In!</h4>
+              </div>
+              <div class="modal-body">
+                <p>From here, you can check out the whiskeys on your shelf, add more, or update information about specific bottles.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--Created New Whiskey Shelf Modal-->
+        <div class="modal" id="myModalTwo" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You've Created a Shelf!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Now sign in to start adding whiskeys!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">I'm Ready!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--%Add Whiskey Form Modal-->
+<!--
+<div class="modal fade" tabindex="=-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true"id="myModalWhiskey">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Add A Whiskey</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="update-modal-header">
+      <form id="create-whiskey" class="authenticated">
+        <label for="whiskeyName">Enter Whiskey Name:</label>
+          <input class="form-control" name="whiskey[name]" type="text" placeholder="Name">
+        <label for="whiskeyType"> Enter Whiskey Type:</label>
+        <select name="whiskey[type]" class="form-control" style="padding:5px">
+          <option value="" disabled selected hidden>Select type</option>
+          <option value="Bourbon">Bourbon</option>
+          <option value="Single Malt">Single Malt</option>
+          <option value="Rye">Rye</option>
+          <option value="Scotch">Scotch</option>
+          <option value="Irish Whiskey">Irish Whiskey</option>
+          <option value="Blended Whiskey">Blended Whiskey</option>
+          <option value="Tennessee Whiskey">Tennessee Whiskey</option>
+          <option value="Japanese Whiskey">Japanese Whiskey</option>
+          <option value="Canadian Whiskey">Canadian Whiskey</option>
+        </select>
+        <label for="whiskeyCountry">Select Country:</label>
+        <select name="whiskey[country]" class="form-control" style="padding:5px">
+          <option value="" disabled selected hidden>Select country</option>
+          <option value="Bourbon">USA</option>
+          <option value="Single Malt">Scotland</option>
+          <option value="Rye">Ireland</option>
+          <option value="Scotch">Japan</option>
+          <option value="Irish Whiskey">Canada</option>
+        </select>
+        <label for="whiskeyPrice"> Enter Whiskey Price:</label>
+          <input class="form-control" name="whiskey[price]" type="text" placeholder="Price: ex.55" style="padding:5px">
+        <label for="whiskeyComments"> Comments:</label>
+          <textarea type="text" name="whiskey[comments]" class="create-textbox form-control" placeholder="Comments"></textarea>
+          <button id="create-whiskey-button" type="submit" class="btn btn-info btn-lg">Add</button>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn btn-info btn-lg" style="background:#ede8d8;
+        color: black; padding: 10px;" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!--Added Whiskey Modal-->
+        <div class="modal" id="myModalThree" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You've Added a Whiskey!</h4>
+              </div>
+              <div class="modal-body">
+                <p>You'll find it at the end of your shelf</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--Deleted Whiskey Modal-->
+        <div class="modal" id="myModalFive" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">Bottle's Empty - You've Deleted a Whiskey!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Time to add more!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--%Change Password Form Modal-->
+<!-- <div class="modal fade" tabindex="=-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true"id="myModalPassword">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Change Password</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="update-modal-header">
+                  <h2 class="update-modal-title">Change Your Password</h2>
+                <form id="change-password" class="authenticated">
+                    <input class="form-control" name="passwords[old]" placeholder="old password" type="password">
+                    <input class="form-control" name="passwords[new]" placeholder="new password" type="password">
+                    <button id="password" type="submit" class="btn btn-info btn-lg">Change</button>
+                </form>
+              </div>
+            </div>
+          </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+          </div>
+        </div> -->
+
+<!-- Changed Password Modal -->
+        <div class="modal" id="myModalSix" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You've Changed Your Password!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Now don't forget it!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--Whiskey Updated Modal -->
+        <div class="modal" id="myModalSeven" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">Whiskey Updated!</h4>
+              </div>
+              <div class="modal-body">
+                <p>You're on a roll!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End Modals-->
+
+  <!-- Sign out button-->
+    <footer>
+      <form id="sign-out" class="authenticated">
+          <button id="sign-out-button" type="submit" class="btn btn-info btn-md">Sign Out</button>
+      </form>
+    </footer>
+    </body>
+</html>
