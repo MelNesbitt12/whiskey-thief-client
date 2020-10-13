@@ -16,4 +16,7 @@ $(() => {
   $('#all-whiskeys').on('submit', '.update-whiskey', whiskeyEvents.onUpdate)
   $('#create-whiskey').on('submit', whiskeyEvents.onCreate)
   $('#all-whiskeys').on('click', '.delete-button', whiskeyEvents.onDelete)
+  // $('#myModalPassword').modal({ backdrop: 'static', keyboard: false, show: false })
+  // $('#myModalWhiskey').modal({ backdrop: 'static', keyboard: false, show: false })
+  // $('.nav-link').on('click', function () { $('.collapse').collapse('hide') })
 })
